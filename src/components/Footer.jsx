@@ -121,19 +121,19 @@ function Footer() {
 
         {/* Middle: Hạng mục */}
         <div style={{ flex: 0, minWidth: 120, display: "flex", flexDirection: "column", gap: 14 }}>
-          <div style={{ fontWeight: 700, fontSize: 20, color: "#fff", marginBottom: 4 }}>Hạng mục</div>
-          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>Trang chủ</a>
-          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>Tin tức</a>
-          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>Cửa hàng</a>
-          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>Nạp tiền</a>
-          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>Cộng đồng</a>
+          <div style={{ fontWeight: 700, fontSize: 20, color: "#fff", marginBottom: 4 }}>{t(language, 'footer.categories')}</div>
+          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.home')}</a>
+          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.news')}</a>
+          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.store')}</a>
+          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.topup')}</a>
+          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.community')}</a>
         </div>
 
         {/* Middle Right: Hỗ trợ */}
         <div style={{ flex: 0, minWidth: 180, display: "flex", flexDirection: "column", gap: 14, marginLeft: 40 }}>
-          <div style={{ fontWeight: 700, fontSize: 20, color: "#fff", marginBottom: 4 }}>Hỗ trợ</div>
-          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>Câu hỏi thường gặp</a>
-          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>Nạp tiền</a>
+          <div style={{ fontWeight: 700, fontSize: 20, color: "#fff", marginBottom: 4 }}>{t(language, 'footer.support')}</div>
+          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.faq')}</a>
+          <a href="#" style={{ color: "#E8E8E8", fontSize: 16, fontWeight: 400, textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.topup')}</a>
         </div>
 
         {/* Spacer */}
@@ -141,8 +141,8 @@ function Footer() {
 
         {/* Right: Subscribe */}
         <div style={{ flex: 0, minWidth: 320, display: "flex", flexDirection: "column", gap: 12 }}>
-          <div style={{ fontWeight: 700, fontSize: 20, color: "#fff", marginBottom: 4 }}>Đăng ký nhận thông tin</div>
-          <label style={{ color: "#E8E8E8", fontSize: 14, fontWeight: 400, marginBottom: 4 }}>Email</label>
+          <div style={{ fontWeight: 700, fontSize: 20, color: "#fff", marginBottom: 4 }}>{t(language, 'footer.subscribe')}</div>
+          <label style={{ color: "#E8E8E8", fontSize: 14, fontWeight: 400, marginBottom: 4 }}>{t(language, 'footer.email')}</label>
           <input
             type="email"
             placeholder=""
@@ -176,8 +176,8 @@ function Footer() {
         fontWeight: 500,
         gap: 60
       }}>
-        <a href="/terms" style={{ color: "#E8E8E8", textDecoration: "none", cursor: "pointer" }}>Điều khoản sử dụng</a>
-        <a href="/privacy-policy" style={{ color: "#E8E8E8", textDecoration: "none", cursor: "pointer" }}>Chính sách bảo mật thông tin</a>
+        <a href="/terms" style={{ color: "#E8E8E8", textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.terms')}</a>
+        <a href="/privacy-policy" style={{ color: "#E8E8E8", textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.privacy')}</a>
       </div>
     </footer>
   );

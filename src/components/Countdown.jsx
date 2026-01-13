@@ -1,13 +1,17 @@
 import "../style/App.css";
 import giftIcon from "../assets/img/Gift.png";
 import dollarIcon from "../assets/img/Dollar sign.png";
+import { useLanguage } from "../context/LanguageContext";
+import { t } from "../utils/translations";
 
 function Countdown() {
+  const { language } = useLanguage();
+  
   const benefits = [
-    { icon: "gift", title: "Ưu đãi hấp dẫn" },
-    { icon: "gift", title: "Vật phẩm độc quyền" },
-    { icon: "gift", title: "Thanh toán trực tiếp" },
-    { icon: "dollar", title: "Giá tốt nhất" }
+    { icon: "gift", title: t(language, 'topup.benefit1') },
+    { icon: "gift", title: t(language, 'topup.benefit2') },
+    { icon: "gift", title: t(language, 'topup.benefit3') },
+    { icon: "dollar", title: t(language, 'topup.benefit4') }
   ];
 
   return (
@@ -29,7 +33,7 @@ function Countdown() {
           letterSpacing: 2,
           fontFamily: 'Montserrat, sans-serif'
         }}>
-          NẠP TIỀN
+          {t(language, 'topup.title')}
         </h1>
         
         <p style={{
@@ -39,7 +43,7 @@ function Countdown() {
           marginBottom: 60,
           letterSpacing: 1
         }}>
-          LỢI ÍCH KHI NẠP TRỰC TIẾP TẠI VKE
+          {t(language, 'topup.subtitle')}
         </p>
 
         {/* Benefits Cards */}

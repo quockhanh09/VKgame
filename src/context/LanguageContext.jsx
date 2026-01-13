@@ -11,15 +11,27 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('vi');
+  // Load language from localStorage on initial render, default to 'vi' if not found
+  const [language, setLanguage] = useState(() => {
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    return savedLanguage || 'vi';
+  });
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'vi' ? 'en' : 'vi');
+    setLanguage(prev => {
+      const newLanguage = prev === 'vi' ? 'en' : 'vi';
+      // Save to localStorage whenever language changes
+      localStorage.setItem('preferredLanguage', newLanguage);
+      return newLanguage;
+    });
   };
 
   const value = {
     language,
-    setLanguage,
+    setLanguage: (newLang) => {
+      setLanguage(newLang);
+      localStorage.setItem('preferredLanguage', newLang);
+    },
     toggleLanguage
   };
 

@@ -22,6 +22,14 @@ export const translations = {
       viewAll: "Xem tất cả",
       selectGame: "Chọn trò chơi"
     },
+    topup: {
+      title: "NẠP TIỀN",
+      subtitle: "LỢI ÍCH KHI NẠP TRỰC TIẾP TẠI VKE",
+      benefit1: "Ưu đãi hấp dẫn",
+      benefit2: "Vật phẩm độc quyền",
+      benefit3: "Thanh toán trực tiếp",
+      benefit4: "Giá tốt nhất"
+    },
     tabs: {
       copyright: "Tin tức bản quyền",
       event: "Sự kiện",
@@ -30,20 +38,18 @@ export const translations = {
     footer: {
       about: "VỀ CHÚNG TÔI",
       aboutDesc: "VK Entertainment là đơn vị hàng đầu trong lĩnh vực phát hành và vận hành game tại Việt Nam",
-      quickLinks: "LIÊN KẾT NHANH",
+      categories: "Hạng mục",
       home: "Trang chủ",
       news: "Tin tức",
       store: "Cửa hàng",
+      topup: "Nạp tiền",
+      community: "Cộng đồng",
       support: "Hỗ trợ",
-      contact: "LIÊN HỆ",
+      faq: "Câu hỏi thường gặp",
+      subscribe: "Đăng ký nhận thông tin",
       email: "Email",
-      phone: "Điện thoại",
-      address: "Địa chỉ",
-      addressValue: "Vinhomes West Point, Phường Từ Liêm, Thành phố Hà Nội, Việt Nam",
-      legal: "PHÁP LÝ",
       terms: "Điều khoản sử dụng",
-      privacy: "Chính sách bảo mật",
-      copyright: "Bản quyền © 2026 VK Entertainment. Tất cả quyền được bảo lưu."
+      privacy: "Chính sách bảo mật thông tin"
     }
   },
   en: {
@@ -69,6 +75,14 @@ export const translations = {
       viewAll: "View All",
       selectGame: "Select game"
     },
+    topup: {
+      title: "TOP UP",
+      subtitle: "BENEFITS WHEN TOPPING UP DIRECTLY AT VKE",
+      benefit1: "Attractive Offers",
+      benefit2: "Exclusive Items",
+      benefit3: "Direct Payment",
+      benefit4: "Best Price"
+    },
     tabs: {
       copyright: "Copyright News",
       event: "Events",
@@ -77,20 +91,18 @@ export const translations = {
     footer: {
       about: "ABOUT US",
       aboutDesc: "VK Entertainment is a leading publisher and operator of games in Vietnam",
-      quickLinks: "QUICK LINKS",
+      categories: "Categories",
       home: "Home",
       news: "News",
       store: "Store",
+      topup: "Top Up",
+      community: "Community",
       support: "Support",
-      contact: "CONTACT",
+      faq: "FAQ",
+      subscribe: "Subscribe to Newsletter",
       email: "Email",
-      phone: "Phone",
-      address: "Address",
-      addressValue: "Vinhomes West Point, Tu Liem Ward, Hanoi City, Vietnam",
-      legal: "LEGAL",
-      terms: "Terms of Service",
-      privacy: "Privacy Policy",
-      copyright: "Copyright © 2026 VK Entertainment. All rights reserved."
+      terms: "Terms of Use",
+      privacy: "Privacy Policy"
     }
   }
 };
