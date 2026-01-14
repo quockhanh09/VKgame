@@ -594,7 +594,7 @@ function PrivacyPolicy() {
 
   return (
     <section style={{
-      background: 'linear-gradient(180deg, #262335 10%, #463699 40%, #8A83DA 70%, #FBD5BD 100%)',
+      backgroundColor: "#ffffff",
       padding: "80px 20px",
       minHeight: "100vh",
     }}>
@@ -604,7 +604,7 @@ function PrivacyPolicy() {
         padding: "60px 20px",
       }}>
         <h1 style={{
-          color: "#fff",
+          color: "#000000",
           fontSize: 36,
           fontWeight: 700,
           marginBottom: 40,
@@ -616,14 +616,14 @@ function PrivacyPolicy() {
         </h1>
 
         <div style={{
-          color: "#fff",
+          color: "#000000",
           fontSize: 15,
           lineHeight: 1.8,
           fontFamily: 'Arial, sans-serif'
         }}>
           
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {introData.title}
             </h2>
             {introData.content.map((item, index) => (
@@ -634,7 +634,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section2Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -653,7 +653,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section3Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -679,7 +679,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section4Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -699,7 +699,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section5Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -711,7 +711,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section6Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -731,7 +731,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section7Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -746,7 +746,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section8Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -769,7 +769,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section9Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -790,7 +790,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section10Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -808,7 +808,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section11Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -823,7 +823,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section12Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -862,7 +862,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {dataStorageData.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -871,7 +871,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section13Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -958,7 +958,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section14Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -970,7 +970,7 @@ function PrivacyPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#fff" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15, color: "#000000" }}>
               {section15Data.title}
             </h2>
             <p style={{ marginBottom: 12, textAlign: "justify" }}>
@@ -984,7 +984,7 @@ function PrivacyPolicy() {
             borderTop: "2px solid rgba(255,255,255,0.3)",
             textAlign: "center",
             fontSize: 14,
-            color: "#fff"
+            color: "#000000"
           }}>
             <p>{lastUpdatedText}</p>
           </div>
