@@ -178,6 +178,7 @@ function Footer() {
       }}>
         <a href="/terms" style={{ color: "#E8E8E8", textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.terms')}</a>
         <a href="/privacy-policy" style={{ color: "#E8E8E8", textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.privacy')}</a>
+        <a href="/personal-data-policy" style={{ color: "#E8E8E8", textDecoration: "none", cursor: "pointer" }}>{t(language, 'footer.personalDataPolicy')}</a>
       </div>
     </footer>
   );

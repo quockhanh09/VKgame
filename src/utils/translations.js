@@ -50,6 +50,7 @@ export const translations = {
       email: "Email",
       terms: "Điều khoản sử dụng",
       privacy: "Chính sách bảo mật thông tin"
+      ,personalDataPolicy: "Chính sách xử lý dữ liệu cá nhân"
     }
   },
   en: {
@@ -103,6 +104,7 @@ export const translations = {
       email: "Email",
       terms: "Terms of Use",
       privacy: "Privacy Policy"
+      ,personalDataPolicy: "Personal Data Processing Policy"
     }
   }
 };

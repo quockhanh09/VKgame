@@ -24,6 +24,7 @@ import Comingsoon from "./components/comingsoon";
 import ListDeatails from "./components/ListDeatails";
 import Terms from "./components/Terms";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import PersonalDataPolicy from "./components/PersonalDataPolicy";
 import { LanguageProvider, useLanguage } from "./context/LanguageContext";
 import { t } from "./utils/translations";
 import "./style/App.css";
@@ -547,6 +548,7 @@ function AppContent() {
           <Route path="/ListDeatails" element={<ListDeatails />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/personal-data-policy" element={<PersonalDataPolicy />} />
         </Routes>
         {location.pathname !== "/Comingsoon" && location.pathname !== "/terms" && location.pathname !== "/privacy-policy" && <Countdown />}
         {/* ===== FOOTER ===== */}
