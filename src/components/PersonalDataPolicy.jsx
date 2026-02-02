@@ -354,7 +354,7 @@ function PersonalDataPolicy() {
             <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15 }}>{language === 'en' ? 'Article 1: What information do users provide to the application?' : intro.title}</h2>
             {language === 'en' ? (
               <>
-                <p style={{ fontWeight: 600, marginBottom: 12, textAlign: "justify" }}>
+                <p style={{ marginBottom: 12, textAlign: "justify" }}>
                   This application <b>does not require users to register an account or log in</b> to use the service. Therefore, the Service Provider <b>does not request and does not collect</b> information that could directly identify an individual, such as full name, address, phone number, or email address. Users are <b>free to use all the application's functions without providing personal data.</b>
                 </p>
                 <p style={{ fontWeight: 700, marginBottom: 8, textAlign: "justify" }}>[Exceptions related to customer support]</p>
@@ -364,7 +364,7 @@ function PersonalDataPolicy() {
               </>
             ) : (
               <>
-                <p style={{ fontWeight: 600, marginBottom: 12, textAlign: "justify" }}>
+                <p style={{  marginBottom: 12, textAlign: "justify" }}>
                   Ứng dụng này <b>không yêu cầu người dùng đăng ký tài khoản hoặc thực hiện thủ tục đăng nhập</b> để sử dụng dịch vụ. Do đó, Nhà cung cấp dịch vụ <b>không yêu cầu và không thu thập</b> các thông tin có thể trực tiếp xác định danh tính cá nhân như họ tên, địa chỉ, số điện thoại hay địa chỉ email. Người dùng có thể <b>tự do sử dụng toàn bộ chức năng của ứng dụng mà không cần cung cấp dữ liệu cá nhân.</b>
                 </p>
                 <p style={{ fontWeight: 700, marginBottom: 8, textAlign: "justify" }}>[Ngoại lệ liên quan đến hỗ trợ khách hàng]</p>
