@@ -594,8 +594,7 @@ function PrivacyPolicy() {
 
   return (
     <section style={{
-      backgroundColor: "#ffffff",
-      padding: "80px 20px",
+      backgroundColor: "#fcf8f2",
       minHeight: "100vh",
     }}>
       <div style={{

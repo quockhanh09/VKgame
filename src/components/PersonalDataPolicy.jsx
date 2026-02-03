@@ -5,6 +5,7 @@ import "../style/App.css";
 import { useLanguage } from "../context/LanguageContext";
 import { t } from "../utils/translations";
 import { useNavigate, useParams } from "react-router-dom";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 
 
@@ -181,96 +182,141 @@ function PersonalDataPolicy() {
   // Danh sách game mẫu
   const gameListVi = [
     { value: '', label: 'Game Select' },
-    { value: 'vuong-quoc-bong-bong', label: 'Vương Quốc Bong Bóng' },
-    { value: 'day-xich-ma-thuat', label: 'Dây Xích Ma Thuật' },
-    { value: 'duong-ong-lien-hoan', label: 'Đường Ống Liên Hoàn' },
-    { value: 'xep-ngoc-3d', label: 'Xếp Ngọc 3D' },
-    { value: 'thach-dai-chien', label: 'Thạch Đại Chiến' },
-    { value: 'hoa-si-pixel', label: 'Họa Sĩ Pixel' },
-    { value: 'bac-thay-pha-che', label: 'Bậc Thầy Pha Chế' },
-    { value: 'giai-ma-oc-vit', label: 'Giải Mã Ốc Vít' },
-    { value: 'giao-chien', label: 'Giáo Chiến' },
-    { value: 'vua-sinh-ton', label: 'Vua Sinh tồn' },
-    { value: 'phuong-trinh-bong-bong', label: 'Phương Trình Bong Bóng' },
-    { value: 'giai-ma-oc-vit-2', label: 'Giải Mã Ốc Vít 2' },
-    { value: 'que-tam-tri-tue', label: 'Que Tăm Trí Tuệ' },
-    { value: 'sieu-sao-sudoku', label: 'Siêu Sao Sudoku' },
-    { value: 'vua-dau-bep', label: 'Vua Đầu Bếp' },
-    { value: 'pha-khoi', label: 'Phá Khối' },
-    { value: 'trong-xe-chuyen-nghiep', label: 'Trông Xe Chuyên Nghiệp' },
-    { value: 'ong-vang-lam-toan', label: 'Ong Vàng Làm Toán' },
-    { value: 'phan-luc-tren-khong', label: 'Phản Lực Trên Không' },
-    { value: 'hop-sac-mau', label: 'Hộp Sắc Màu' },
-    { value: 'sac-mau-luc-giac', label: 'Sắc Màu Lục Giác' },
-    { value: 'cu-cham-vo-han', label: 'Cú Chạm Vô Hạn' },
-    { value: 'cho-xe-sieu-toc', label: 'Chở Xe Siêu Tốc' },
-    { value: 'lien-ket-ma-thuat', label: 'Liên Kết Ma Thuật' },
-    { value: 'vuong-quoc-gau-bang', label: 'Vương Quốc Gấu Băng' },
-    { value: 'duong-dua-vo-han', label: 'Đường Đua Vô Hạn' },
-    { value: 'xay-dung-to-ong', label: 'Xây Dựng Tổ Ong' },
-    { value: 'can-bang-hoa-hoc', label: 'Cân Bằng Hoá Học' },
-    { value: 'dao-sinh-ton', label: 'Đảo Sinh Tồn' },
-    { value: 'lan-sieu-toc', label: 'Lăn Siêu Tốc' },
-    { value: 'vua-toc-do', label: 'Vua Tốc Độ' },
-    { value: 've-si-nguoi-que', label: 'Vệ Sĩ Người Que' },
-    { value: 'hanh-tinh-da-giac', label: 'Hành Tinh Đa Giác' },
-    { value: 'giai-ma-oc-vit-3', label: 'Giải Mã Ốc Vít 3' },
-    { value: 'giao-lo-cau-vong', label: 'Giao Lộ Cầu Vồng' },
-    { value: 'xuong-phan-loai', label: 'Xưởng Phân Loại' },
-    { value: 'phi-doi-ngan-ha', label: 'Phi Đội Ngân Hà' },
-    { value: 'nhip-roi-thoi-gian', label: 'Nhịp Rơi Thời Gian' },
-    { value: 'thach-vien', label: 'Thạch Viện' },
-    { value: 'pha-khoi-2', label: 'Phá Khối' },
+    { value: 'bubble-cushion', label: 'Vương Quốc Bong Bóng' },
+    { value: 'chain-link', label: 'Dây Xích Ma Thuật' },
+    { value: 'port-port', label: 'Đường Ống Liên Hoàn' },
+    { value: 'jewel-liberation', label: 'Xếp Ngọc 3D' },
+    { value: 'jelly-1010', label: 'Thạch Đại Chiến' },
+    { value: 'pixel-coloring', label: 'Họa Sĩ Pixel' },
+    { value: 'flask-water-sort', label: 'Bậc Thầy Pha Chế' },
+    { value: 'screw-one', label: 'Giải Mã Ốc Vít' },
+    { value: 'spearman', label: 'Giáo Chiến' },
+    { value: 'fall-man', label: 'Vua Sinh tồn' },
+    { value: 'bubble-equation', label: 'Phương Trình Bong Bóng' },
+    { value: 'screw-two', label: 'Giải Mã Ốc Vít 2' },
+    { value: 'toothpick-pro', label: 'Que Tăm Trí Tuệ' },
+    { value: 'sudoku-star', label: 'Siêu Sao Sudoku' },
+    { value: 'food-biz-master', label: 'Vua Đầu Bếp' },
+    { value: 'block-shredder', label: 'Phá Khối' },
+    { value: 'parking-lot-valet', label: 'Trông Xe Chuyên Nghiệp' },
+    { value: 'bee-math-connect', label: 'Ong Vàng Làm Toán' },
+    { value: 'fly-shot', label: 'Phản Lực Trên Không' },
+    { value: 'paint-the-box', label: 'Hộp Sắc Màu' },
+    { value: 'hexa-flip', label: 'Sắc Màu Lục Giác' },
+    { value: 'infinite-tap-tap', label: 'Cú Chạm Vô Hạn' },
+    { value: 'car-transport', label: 'Chở Xe Siêu Tốc' },
+    { value: 'circuit-magic', label: 'Liên Kết Ma Thuật' },
+    { value: 'icy-bear-match', label: 'Vương Quốc Gấu Băng' },
+    { value: 'hit-run', label: 'Đường Đua Vô Hạn' },
+    { value: 'honeycom-build', label: 'Xây Dựng Tổ Ong' },
+    { value: 'chem-work', label: 'Cân Bằng Hoá Học' },
+    { value: 'island-together', label: 'Đảo Sinh Tồn' },
+    { value: 'infinite-roll', label: 'Lăn Siêu Tốc' },
+    { value: 'hit-race-one', label: 'Vua Tốc Độ' },
+    { value: 'stickman-protector', label: 'Vệ Sĩ Người Que' },
+    { value: 'poly-world', label: 'Hành Tinh Đa Giác' },
+    { value: 'screw_three', label: 'Giải Mã Ốc Vít 3' },
+    { value: 'paint-the-road', label: 'Giao Lộ Cầu Vồng' },
+    { value: 'packing-ball', label: 'Xưởng Phân Loại' },
+    { value: 'g-conqueror', label: 'Phi Đội Ngân Hà' },
+    { value: 'tic-tac-down', label: 'Nhịp Rơi Thời Gian' },
+    { value: 'jelly-lab', label: 'Thạch Viện' },
+    { value: 'split-beads', label: 'Phá Khối' },
   ];
 
   const gameListEn = [
     { value: '', label: 'Game Select' },
-    { value: 'vuong-quoc-bong-bong', label: 'Bubble Cushion' },
-    { value: 'day-xich-ma-thuat', label: 'Chain Link' },
-    { value: 'duong-ong-lien-hoan', label: 'Port Port' },
-    { value: 'xep-ngoc-3d', label: 'Jewel Liberation' },
-    { value: 'thach-dai-chien', label: 'Jelly 1010' },
-    { value: 'hoa-si-pixel', label: 'Pixel Coloring' },
-    { value: 'bac-thay-pha-che', label: 'Flask Water Sort' },
-    { value: 'giai-ma-oc-vit', label: 'Screw One' },
-    { value: 'giao-chien', label: 'Spearman' },
-    { value: 'vua-sinh-ton', label: 'Fall Man' },
-    { value: 'phuong-trinh-bong-bong', label: 'Bubble Equation' },
-    { value: 'giai-ma-oc-vit-2', label: 'Screw TWO' },
-    { value: 'que-tam-tri-tue', label: 'Toothpick Pro' },
-    { value: 'sieu-sao-sudoku', label: 'Sudoku Star' },
-    { value: 'vua-dau-bep', label: 'Food Biz Master' },
-    { value: 'pha-khoi', label: 'Block Shredder' },
-    { value: 'trong-xe-chuyen-nghiep', label: 'Parking Lot Valet' },
-    { value: 'ong-vang-lam-toan', label: 'Bee Math Connect' },
-    { value: 'phan-luc-tren-khong', label: 'Fly Shot' },
-    { value: 'hop-sac-mau', label: 'Paint The Box' },
-    { value: 'sac-mau-luc-giac', label: 'Hexa Flip' },
-    { value: 'cu-cham-vo-han', label: 'Infinite Tap Tap' },
-    { value: 'cho-xe-sieu-toc', label: 'Car Transport' },
-    { value: 'lien-ket-ma-thuat', label: 'Circuit Magic' },
-    { value: 'vuong-quoc-gau-bang', label: 'Icy Bear Match' },
-    { value: 'duong-dua-vo-han', label: 'HIT RUN' },
-    { value: 'xay-dung-to-ong', label: 'Honeycom Build' },
-    { value: 'can-bang-hoa-hoc', label: 'CHEM WORK' },
-    { value: 'dao-sinh-ton', label: 'Island Together' },
-    { value: 'lan-sieu-toc', label: 'Infinite Roll' },
-    { value: 'vua-toc-do', label: 'HIT Race One' },
-    { value: 've-si-nguoi-que', label: 'Stickman Protector' },
-    { value: 'hanh-tinh-da-giac', label: 'Poly World' },
-    { value: 'giai-ma-oc-vit-3', label: 'SCREW 3' },
-    { value: 'giao-lo-cau-vong', label: 'Paint The Road' },
-    { value: 'xuong-phan-loai', label: 'Packing Ball' },
-    { value: 'phi-doi-ngan-ha', label: 'G Conqueror' },
-    { value: 'nhip-roi-thoi-gian', label: 'Tic Tac Down' },
-    { value: 'thach-vien', label: 'Jelly LAB' },
-    { value: 'pha-khoi-2', label: 'Split Beads' },
+    { value: 'bubble-cushion', label: 'Bubble Cushion' },
+    { value: 'chain-link', label: 'Chain Link' },
+    { value: 'port-port', label: 'Port Port' },
+    { value: 'jewel-liberation', label: 'Jewel Liberation' },
+    { value: 'jelly-1010', label: 'Jelly 1010' },
+    { value: 'pixel-coloring', label: 'Pixel Coloring' },
+    { value: 'flask-water-sort', label: 'Flask Water Sort' },
+    { value: 'screw-one', label: 'Screw One' },
+    { value: 'spearman', label: 'Spearman' },
+    { value: 'fall-man', label: 'Fall Man' },
+    { value: 'bubble-equation', label: 'Bubble Equation' },
+    { value: 'screw-two', label: 'Screw TWO' },
+    { value: 'toothpick-pro', label: 'Toothpick Pro' },
+    { value: 'sudoku-star', label: 'Sudoku Star' },
+    { value: 'food-biz-master', label: 'Food Biz Master' },
+    { value: 'block-shredder', label: 'Block Shredder' },
+    { value: 'parking-lot-valet', label: 'Parking Lot Valet' },
+    { value: 'bee-math-connect', label: 'Bee Math Connect' },
+    { value: 'fly-shot', label: 'Fly Shot' },
+    { value: 'paint-the-box', label: 'Paint The Box' },
+    { value: 'hexa-flip', label: 'Hexa Flip' },
+    { value: 'infinite-tap-tap', label: 'Infinite Tap Tap' },
+    { value: 'car-transport', label: 'Car Transport' },
+    { value: 'circuit-magic', label: 'Circuit Magic' },
+    { value: 'icy-bear-match', label: 'Icy Bear Match' },
+    { value: 'hit-run', label: 'HIT RUN' },
+    { value: 'honeycom-build', label: 'Honeycom Build' },
+    { value: 'chem-work', label: 'CHEM WORK' },
+    { value: 'island-together', label: 'Island Together' },
+    { value: 'infinite-roll', label: 'Infinite Roll' },
+    { value: 'hit-race-one', label: 'HIT Race One' },
+    { value: 'stickman-protector', label: 'Stickman Protector' },
+    { value: 'poly-world', label: 'Poly World' },
+    { value: 'screw_three', label: 'SCREW 3' },
+    { value: 'paint-the-road', label: 'Paint The Road' },
+    { value: 'packing-ball', label: 'Packing Ball' },
+    { value: 'g-conqueror', label: 'G Conqueror' },
+    { value: 'tic-tac-down', label: 'Tic Tac Down' },
+    { value: 'jelly-lab', label: 'Jelly LAB' },
+    { value: 'split-beads', label: 'Split Beads' },
   ];
   // Lấy tên game từ URL nếu có
   const [selectedGame, setSelectedGame] = React.useState(params.game || '');
 
   // Lấy danh sách game theo ngôn ngữ
   const gameList = language === 'en' ? gameListEn : gameListVi;
+
+  // Nếu không chọn game, hiển thị PrivacyPolicy
+  if (!selectedGame) {
+    return (
+      <>
+        <section style={{ background: "#fcf8f2", minHeight: "auto", padding: 0 }}>
+          <div style={{ height: 36 }} />
+          <div style={{ maxWidth: 1400, margin: "0 auto", padding: 0, position: "relative" }}>
+            <div style={{ width: "100%", display: "flex", justifyContent: "flex-end", position: "relative", zIndex: 2, marginLeft:40 }}>
+              <select
+                value={selectedGame}
+                onChange={e => {
+                  setSelectedGame(e.target.value);
+                  if (e.target.value) {
+                    window.history.replaceState(null, '', `/personal-data-policy/${e.target.value}`);
+                  } else {
+                    window.history.replaceState(null, '', `/personal-data-policy`);
+                  }
+                }}
+                style={{
+                  minWidth: 270,
+                  padding: "10px 22px",
+                  borderRadius: 10,
+                  border: "1.5px solid #a89ad1",
+                  fontSize: 18,
+                  color: "#6B5E93",
+                  background: "#faf8ff",
+                  fontWeight: 500,
+                  outline: "none",
+                  marginTop: 8,
+                  marginBottom: 24,
+                  boxShadow: "0 2px 8px rgba(168,154,209,0.08)"
+                }}
+              >
+                {gameList.map(g => (
+                  <option key={g.value} value={g.value}>{g.label}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </section>
+        <PrivacyPolicy />
+      </>
+    );
+  }
 
   return (
     <section style={{ background: "#fcf8f2", minHeight: "100vh", padding: 0 }}>
