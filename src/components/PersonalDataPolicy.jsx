@@ -325,7 +325,7 @@ function PersonalDataPolicy() {
       <div style={{ height: 36 }} />
       <div style={{ maxWidth: 1400, margin: "0 auto", padding: 0, position: "relative" }}>
         {/* Game Select ở sát mép phải */}
-        <div style={{ width: "100%", display: "flex", justifyContent: "flex-end", position: "relative", zIndex: 2, marginLeft:40 }}>
+        <div style={{ width: "100%", display: "flex", justifyContent: "flex-end", position: "relative", zIndex: 2, right: 200 }}>
           <select
             value={selectedGame}
             onChange={e => {
@@ -356,7 +356,7 @@ function PersonalDataPolicy() {
             ))}
           </select>
         </div>
-        <h1 style={{ color: "#181818", fontSize: 40, fontWeight: 400, marginBottom: 32, textAlign: "center", letterSpacing: 1, fontFamily: 'Montserrat, sans-serif', textTransform: 'uppercase', marginTop: 0 }}>
+        <h1 style={{ color: "#181818", fontSize: 40, fontWeight: 400, marginBottom: 32, textAlign: "center", letterSpacing: 1, fontFamily: 'Montserrat, sans-serif', textTransform: 'uppercase', marginTop: 20 }}>
           {getMainTitle()}
         </h1>
         <div style={{ color: "#181818", fontSize: 17, lineHeight: 1.8, fontFamily: 'Arial, sans-serif', maxWidth: 900, margin: "0 auto", marginTop: 12 }}>
