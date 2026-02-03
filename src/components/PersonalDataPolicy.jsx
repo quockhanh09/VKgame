@@ -181,7 +181,7 @@ function PersonalDataPolicy() {
 
   // Danh sách game mẫu
   const gameListVi = [
-    { value: '', label: 'Game Select' },
+    { value: '', label: 'Chung' },
     { value: 'bubble-cushion', label: 'Vương Quốc Bong Bóng' },
     { value: 'chain-link', label: 'Dây Xích Ma Thuật' },
     { value: 'port-port', label: 'Đường Ống Liên Hoàn' },
@@ -225,7 +225,7 @@ function PersonalDataPolicy() {
   ];
 
   const gameListEn = [
-    { value: '', label: 'Game Select' },
+    { value: '', label: 'Game' },
     { value: 'bubble-cushion', label: 'Bubble Cushion' },
     { value: 'chain-link', label: 'Chain Link' },
     { value: 'port-port', label: 'Port Port' },
@@ -280,15 +280,15 @@ function PersonalDataPolicy() {
         <section style={{ background: "#fcf8f2", minHeight: "auto", padding: 0 }}>
           <div style={{ height: 36 }} />
           <div style={{ maxWidth: 1400, margin: "0 auto", padding: 0, position: "relative" }}>
-            <div style={{ width: "100%", display: "flex", justifyContent: "flex-end", position: "relative", zIndex: 2, marginLeft:40 }}>
+            <div style={{ width: "100%", position: "relative", zIndex: 2 }}>
               <select
                 value={selectedGame}
                 onChange={e => {
                   setSelectedGame(e.target.value);
                   if (e.target.value) {
-                    window.history.replaceState(null, '', `/personal-data-policy/${e.target.value}`);
+                    window.history.replaceState(null, '', `/privacy-policy/${e.target.value}`);
                   } else {
-                    window.history.replaceState(null, '', `/personal-data-policy`);
+                    window.history.replaceState(null, '', `/privacy-policy`);
                   }
                 }}
                 style={{
@@ -303,6 +303,7 @@ function PersonalDataPolicy() {
                   outline: "none",
                   marginTop: 8,
                   marginBottom: 24,
+                  marginLeft: 1000,
                   boxShadow: "0 2px 8px rgba(168,154,209,0.08)"
                 }}
               >
@@ -330,9 +331,9 @@ function PersonalDataPolicy() {
             onChange={e => {
               setSelectedGame(e.target.value);
               if (e.target.value) {
-                window.history.replaceState(null, '', `/personal-data-policy/${e.target.value}`);
+                window.history.replaceState(null, '', `/privacy-policy/${e.target.value}`);
               } else {
-                window.history.replaceState(null, '', `/personal-data-policy`);
+                window.history.replaceState(null, '', `/privacy-policy`);
               }
             }}
             style={{

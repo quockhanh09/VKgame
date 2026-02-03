@@ -547,8 +547,7 @@ function AppContent() {
           <Route path="/Comingsoon" element={<Comingsoon />} />
           <Route path="/ListDeatails" element={<ListDeatails />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/personal-data-policy" element={<PersonalDataPolicy />} />
+          <Route path="/privacy-policy" element={<PersonalDataPolicy />} />
         </Routes>
         {location.pathname !== "/Comingsoon" && location.pathname !== "/terms" && location.pathname !== "/privacy-policy" && <Countdown />}
         {/* ===== FOOTER ===== */}
