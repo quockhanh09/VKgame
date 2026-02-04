@@ -1,11 +1,3 @@
-# 1️⃣ Redirect HTTP → HTTPS (an toàn cho Custom SSL / ZeroSSL)
-[[redirects]]
-from = "http://vkentertainment.vn/*"
-to = "https://www.vkentertainment.vn/:splat"
-status = 301
-force = true
-
-# 2️⃣ SPA rewrite (React / Vite / Vue)
 [[redirects]]
 from = "/*"
 to = "/index.html"
