@@ -1,5 +1,4 @@
 [[redirects]]
-from = "https://vkentertainment.vn/*"
-to = "https://www.vkentertainment.vn/:splat"
-status = 301
-force = true
+  from = "/*"
+  to = "/index.html"
+  status = 200
