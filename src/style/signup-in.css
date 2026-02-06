@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap');
 
 .register-section {
   display: grid;
@@ -45,7 +46,7 @@ padding: 150px 0;
 }
 
 .register-tab.active {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   background: #ECC689 80%;
   color: #233D4D;
   border-top-right-radius: 10px;
@@ -53,7 +54,7 @@ padding: 150px 0;
 }
 
 .register-tab.inactive {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   background: #868686a4;
   color: #ECC689;
   border-top-left-radius: 10px;
@@ -73,7 +74,7 @@ padding: 150px 0;
 }
 
 .register-field label {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Archivo', sans-serif;
   font-size: 15px;
   margin-bottom: 6px;
   color: #ECC689;
@@ -112,7 +113,7 @@ padding: 150px 0;
 }
 
 .register-hint { 
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   background: rgba(255, 255, 255, 0.226); /* nền trong suốt */
   backdrop-filter: blur(10px); /* làm mờ phía sau */
   -webkit-backdrop-filter: blur(10px);
@@ -132,7 +133,7 @@ padding: 150px 0;
 }
 
 .register-submit {
-    font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   background: #ECC689;
   color: #233D4D;
   border: none;
@@ -152,7 +153,7 @@ padding: 150px 0;
 }
 
 .register-social-title {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -249,7 +250,7 @@ input[type="checkbox"]:checked::after {
    .body-ath {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Archivo', sans-serif;
   height: 900px;
   display: flex;
   align-items: center;
@@ -274,7 +275,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .auth-register-msg {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   display: inline-block;
   background: #ECC689;
   color: #233D4D;
@@ -293,7 +294,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .auth-group label {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 14px;
   display: block;
   margin-bottom: 5px;
@@ -327,7 +328,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .auth-btn-login {
-    font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   background: #ECC689;
   border: none;
   padding: 12px;

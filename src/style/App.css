@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap');
+
 /* Ẩn thanh kéo cho trending carousel */
 .trending-carousel-hide-scroll {
   scrollbar-width: none; /* Firefox */
@@ -11,7 +13,7 @@
   position: relative;
 }
 .license-tab {
-  font-family: 'Inter', 'Raleway', sans-serif;
+  font-family: 'Archivo', sans-serif;
   background: rgba(255,255,255,0.06);
   color: #d5dcf5;
   border: 2px solid rgba(255,255,255,0.14);
@@ -37,6 +39,7 @@
 }
 
 .license-grid {
+  
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
   gap: 40px 34px;
@@ -208,20 +211,20 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
-@font-face {
-  font-family: 'TrajanPro3';
-  src: url('assets\img\font\Trajan Pro 3\TrajanPro3Regular.woff2') format('woff2'),
-    url('assets\img\font\Trajan Pro 3\TrajanPro3Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 
 :root {
-  --default-font: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --heading-font: "Raleway", sans-serif;
-  --nav-font: "Inter", sans-serif;
+  --default-font: 'Archivo', sans-serif;
+  --heading-font: 'Archivo', sans-serif;
+  --nav-font: 'Archivo', sans-serif;
+}
+
+html,
+body {
+  font-family: 'Archivo', sans-serif;
+}
+
+#root {
+  font-family: inherit;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -314,7 +317,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: Lora, serif;
+  font-family: 'Archivo', sans-serif;
 
 }
 
@@ -336,7 +339,7 @@ h4,
 h5,
 h6 {
   /* color: var(--heading-color); */
-  font-family: var(--heading-font);
+  font-family: 'Archivo', sans-serif;
 }
 
 span {
@@ -507,7 +510,7 @@ span {
     color: var(--nav-color);
     font-size: 16px;
     padding: 0 2px;
-    font-family: var(--nav-font);
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -584,7 +587,7 @@ span {
 }
 
 #navmenu ul li a {
-  font-family: 'Times New Roman', serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: bold;
   color: #f6d17a;
   /* Màu vàng chữ */
@@ -636,7 +639,7 @@ span {
   .navmenu a:focus {
     color: white;
     padding: 10px 20px;
-    font-family: var(--nav-font);
+    font-family: 'Archivo', sans-serif;
     font-size: 17px;
     font-weight: 500;
     display: flex;
@@ -708,7 +711,7 @@ span {
 
 
 .subtitle-right {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 22px;
   text-align: center;
   padding-bottom: 12px;
@@ -744,13 +747,13 @@ span {
   left: 0;
   right: 0;
   padding: 14px 18px;
-  font-family: "Georgia", serif;
+  font-family: 'Archivo', sans-serif;
   background: linear-gradient(to top, rgb(255, 255, 255), rgb(59, 59, 59));
   box-shadow: 0 8px 12px -6px rgba(0, 0, 0, 0.4);
 }
 
 .meta .tag {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 14px;
   color: #262626 60%;
   text-transform: uppercase;
@@ -759,7 +762,7 @@ span {
 }
 
 .meta .title {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 22px;
   font-weight: 600;
   color: #000000;
@@ -909,7 +912,7 @@ span {
 }
 
 .card-content-2 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   position: absolute;
   bottom: 16px;
   left: 16px;
@@ -918,7 +921,7 @@ span {
 }
 
 .card-content-2 .tag {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   position: absolute;
   top: -360px;
   /* khoảng cách cách trên */
@@ -932,7 +935,7 @@ span {
 }
 
 .card-content-2 .date {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 30px;
   color: #ccc;
   margin: 4px 0 8px;
@@ -940,7 +943,7 @@ span {
 }
 
 .card-content-2 h3 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   color: #ffffff;
   font-size: 40px;
   font-weight: bold;
@@ -990,7 +993,7 @@ span {
 
 
 .block-heading {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 28px;
   font-weight: bold;
   transform: translateY(-10px);
@@ -1124,7 +1127,7 @@ span {
 }
 
 .title-section-hot {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: 700;
   font-size: 36px;
   margin-bottom: 24px;
@@ -1175,14 +1178,14 @@ span {
   font-size: 28px;
   color: #d4af37;
   margin: 0 0 10px;
-  font-family: "Times New Roman", serif;
+  font-family: 'Archivo', sans-serif;
 }
 
 .guardian-box h3 {
   font-size: 24px;
   color: #b89c4c;
   margin: 0;
-  font-family: "Times New Roman", serif;
+  font-family: 'Archivo', sans-serif;
 }
 
 /* Nhân vật */
@@ -1219,7 +1222,7 @@ span {
 
 /* new guardian */
 .news-section-guardian {
-  font-family: "Times New Roman", serif;
+  font-family: 'Archivo', sans-serif;
   color: #111;
 }
 
@@ -1231,7 +1234,7 @@ span {
 }
 
 .news-container-guardian .title {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   text-align: center;
   font-size: 40px;
   font-weight: bold;
@@ -1275,7 +1278,7 @@ span {
   padding: 20px;
   margin: 40px auto;
 
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Archivo', sans-serif;
 }
 
 .comment-header-guardian {
@@ -1348,7 +1351,7 @@ span {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 25px;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Archivo', sans-serif;
 }
 
 .block-grid {
@@ -1413,21 +1416,21 @@ span {
 }
 
 .news-text h5 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: 700;
   font-size: 18px;
   margin: 0 0 6px 0;
 }
 
 .news-text p {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 14px;
   color: #666;
   margin: 0;
 }
 
 .news-meta-2 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 13px;
   color: #888;
   margin-bottom: 6px;
@@ -1488,7 +1491,7 @@ section,
   font-size: 36px;
   font-weight: 800;
   text-transform: uppercase;
-  font-family: var(--heading-font);
+  font-family: 'Archivo', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -1662,7 +1665,7 @@ section,
 
 
 .btn-stats-more {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1730,7 +1733,7 @@ section,
 
 
 .btn-more {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
 float: right;
   display: inline-flex;
   gap: 5px;
@@ -1760,7 +1763,7 @@ float: right;
 
 /* Nút xem thêm */
 .btn-more {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   float: right;
   display: inline-flex;
   gap: 5px;
@@ -1806,7 +1809,7 @@ float: right;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Lora', serif;
+  font-family: 'Archivo', sans-serif;
 }
 .cp-sub {
   max-width: 860px;
@@ -1854,7 +1857,7 @@ float: right;
   padding: 28px 26px 30px;
   position: relative;
   color: #d7dbef;
-  font-family: 'Inter','Raleway',sans-serif;
+  font-family: 'Archivo', sans-serif;
   box-shadow: 0 8px 32px -10px rgba(18,24,48,0.8), 0 0 0 1px #1d2542;
   overflow: hidden;
   transition: transform .45s cubic-bezier(.4,2,.4,1), box-shadow .55s ease, filter .55s ease;
@@ -2036,7 +2039,7 @@ float: right;
 }
 
 .news-title {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 12px;
@@ -2131,7 +2134,7 @@ float: right;
   font-size: 1.35rem;
   font-weight: 700;
   margin-bottom: 12px;
-  font-family: 'Roboto', 'Raleway', 'Inter', sans-serif;
+  font-family: 'Archivo', sans-serif;
   letter-spacing: 0.5px;
 }
 
@@ -2150,7 +2153,7 @@ float: right;
   font-size: 1.35rem;
   font-weight: 700;
   margin-bottom: 12px;
-  font-family: 'Roboto', 'Raleway', 'Inter', sans-serif;
+  font-family: 'Archivo', sans-serif;
   letter-spacing: 0.5px;
 }
 
@@ -3382,7 +3385,7 @@ a.nav-link.active .icon-img {
   margin: 0 auto;
   /* Tự động canh giữa khi có chiều rộng */
   gap: 10px;
-  font-family: Arial, sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 16px;
   color: white;
   user-select: none;
@@ -4340,14 +4343,14 @@ a.nav-link.active .icon-img {
   max-width: 900px;
   margin-left: 450px;
   margin-right: auto;
-  font-family: "Times New Roman", serif;
+  font-family: 'Archivo', sans-serif;
   line-height: 1.6;
   position: relative;
   z-index: 1;
 }
 
 .gu-thongtin h3 {
-  font-family: "Times New Roman", serif;
+  font-family: 'Archivo', sans-serif;
   color: #EEBE70;
 
   font-size: 30px;
@@ -4358,7 +4361,7 @@ a.nav-link.active .icon-img {
 }
 
 .gu-thongtin p {
-  font-family: "Times New Roman", serif;
+  font-family: 'Archivo', sans-serif;
   margin: 0 0 15px;
   font-size: 20px;
   color: #ECC689;
@@ -4367,7 +4370,7 @@ a.nav-link.active .icon-img {
 }
 
 .gu-title-box {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Archivo', sans-serif;
   display: inline-block;
   background-color: #ECC689;
   /* nền vàng nhạt */
@@ -4392,7 +4395,7 @@ a.nav-link.active .icon-img {
 }
 
 .gate-switch {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   padding: 12px 28px;
   border: 1px solid #d4af73;
   border-radius: 10px;
@@ -4411,7 +4414,7 @@ a.nav-link.active .icon-img {
 }
 
 .gate-switch.chosen {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   background: #d4af73;
   color: #233D4D;
   box-shadow: 0 0 15px rgba(212, 175, 115, 0.6);
@@ -4463,13 +4466,13 @@ a.nav-link.active .icon-img {
 }
 
 .realm-text h2 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 22px;
   margin-bottom: 10px;
 }
 
 .realm-text p {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 18px;
 }
 
@@ -4512,7 +4515,7 @@ a.nav-link.active .icon-img {
 }
 
 .item-card h4 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: #EDD9B9;
@@ -4520,7 +4523,7 @@ a.nav-link.active .icon-img {
 }
 
 .item-card p {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 14px;
   color: #ccc;
 }
@@ -4531,7 +4534,7 @@ a.nav-link.active .icon-img {
 }
 
 .money-title {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   display: inline-block;
   background: #d4af71;
   color: #333;
@@ -4573,14 +4576,14 @@ a.nav-link.active .icon-img {
 }
 
 .money-head {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   color: #EDD9B9;
   font-size: 18px;
   margin: 10px 0;
 }
 
 .money-text {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   color: #EDD9B9;
   font-size: 14px;
   margin: 5px 0;
@@ -4647,7 +4650,7 @@ a.nav-link.active .icon-img {
 }
 
 .helpdesk__title {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   margin: 0 0 6px 0;
   text-transform: uppercase;
   font-weight: 800;
@@ -4689,7 +4692,7 @@ a.nav-link.active .icon-img {
 }
 
 .form__label {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Archivo', sans-serif;
   display: block;
   font-weight: 700;
   color: var(--label);
