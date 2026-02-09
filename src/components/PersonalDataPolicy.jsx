@@ -270,6 +270,15 @@ function PersonalDataPolicy() {
   // Lấy tên game từ URL nếu có
   const [selectedGame, setSelectedGame] = React.useState(params.game || '');
 
+  // Cập nhật selectedGame khi URL params thay đổi
+  React.useEffect(() => {
+    if (params.game) {
+      setSelectedGame(params.game);
+    } else {
+      setSelectedGame('');
+    }
+  }, [params.game]);
+
   // Lấy danh sách game theo ngôn ngữ
   const gameList = language === 'en' ? gameListEn : gameListVi;
 
