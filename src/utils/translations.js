@@ -10,7 +10,7 @@ export const translations = {
     },
     hero: {
       title: "VK ENTERTAINMENT",
-      subtitle: "Thế giới số tuyệt với của bạn"
+      subtitle: "Thế giới số tuyệt vời của bạn"
     },
     news: {
       title: "TIN TỨC",
