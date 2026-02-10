@@ -221,7 +221,7 @@ function PersonalDataPolicy() {
     { value: 'g_conqueror', label: 'Phi Đội Ngân Hà' },
     { value: 'tic_tac_down', label: 'Nhịp Rơi Thời Gian' },
     { value: 'jelly_lab', label: 'Thạch Viện' },
-    { value: 'split_beads', label: 'Phá Khối' },
+    { value: 'split_beads', label: 'Tách Hạt' },
   ];
 
   const gameListEn = [
