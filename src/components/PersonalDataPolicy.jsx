@@ -357,7 +357,8 @@ function PersonalDataPolicy() {
               outline: "none",
               marginTop: 8,
               marginBottom: 24,
-              boxShadow: "0 2px 8px rgba(168,154,209,0.08)"
+              boxShadow: "0 2px 8px rgba(168,154,209,0.08)",
+              display: "none"
             }}
           >
             {gameList.map(g => (
