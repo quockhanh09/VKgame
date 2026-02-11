@@ -286,7 +286,7 @@ function PersonalDataPolicy() {
   if (!selectedGame) {
     return (
       <>
-        <section style={{ background: "#fcf8f2", minHeight: "auto", padding: 0 }}>
+        <section style={{ background: "#fcf8f2", minHeight: "auto", padding: 0, display:"none" }}>
           <div style={{ height: 36 }} />
           <div style={{ maxWidth: 1400, margin: "0 auto", padding: 0, position: "relative" }}>
             <div style={{ width: "100%", position: "relative", zIndex: 2 }}>
