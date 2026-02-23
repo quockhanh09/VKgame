@@ -38,6 +38,9 @@ export const translations = {
     footer: {
       about: "VỀ CHÚNG TÔI",
       aboutDesc: "VK Entertainment là đơn vị hàng đầu trong lĩnh vực phát hành và vận hành game tại Việt Nam",
+      address: "Vinhomes West Point, Phường Từ Liêm, Thành phố Hà Nội, Việt Nam",
+      phone: "Phone: (+84) 962926062",
+      contactEmail: "Email: vkentertainment.info@gmail.com",
       categories: "Hạng mục",
       home: "Trang chủ",
       news: "Tin tức",
@@ -92,6 +95,9 @@ export const translations = {
     footer: {
       about: "ABOUT US",
       aboutDesc: "VK Entertainment is a leading publisher and operator of games in Vietnam",
+      address: "Vinhomes West Point, Tu Liem Ward, Hanoi, Vietnam",
+      phone: "Phone: (+84) 962926062",
+      contactEmail: "Email: vkentertainment.info@gmail.com",
       categories: "Categories",
       home: "Home",
       news: "News",

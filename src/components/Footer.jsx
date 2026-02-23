@@ -31,9 +31,9 @@ function Footer() {
         <div style={{ flex: 0, minWidth: 320, display: "flex", flexDirection: "column", gap: 16 }}>
           <img src={footerLogo} alt="VK Entertainment" style={{ height: 60, width: 178, marginBottom: 8 }} />
           <div style={{ color: "#FFFFFF", fontSize: 14, fontWeight: 400, lineHeight: 1.7 }}>
-            Vinhomes West Point, Phường Từ Liêm, Thành phố Hà Nội, Việt Nam<br />
-            Phone: (+84) 962926062<br />
-            Email: vkentertainment.info@gmail.com
+            {t(language, 'footer.address')}<br />
+            {t(language, 'footer.phone')}<br />
+            {t(language, 'footer.contactEmail')}
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 12 }}>
             {/* Facebook */}
