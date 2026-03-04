@@ -1,0 +1,2 @@
+OwnerDomain=vkentertainment.vn
+google.com, pub-6955070563574126, DIRECT, f08c47fec0942fa0
