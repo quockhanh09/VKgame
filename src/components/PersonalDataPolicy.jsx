@@ -1,3 +1,26 @@
+// Điều 7: Công bố thông tin theo yêu cầu pháp lý và bảo vệ quyền lợi
+const section7 = language !== 'en' ? {
+  title: 'Điều 7: Công bố thông tin theo yêu cầu pháp lý và bảo vệ quyền lợi',
+  intro: 'Về nguyên tắc, nhà cung cấp dịch vụ (và nhà phát hành tại Việt Nam) không công bố thông tin cá nhân của bạn cho bên thứ ba khi chưa có sự đồng ý của bạn. Tuy nhiên, căn cứ theo Điều 17 Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân của Việt Nam, trong các trường hợp sau, thông tin cá nhân có thể được xử lý hoặc cung cấp cho cơ quan có thẩm quyền mà không cần sự đồng ý riêng của chủ thể dữ liệu:',
+  items: [
+    {
+      label: '1. Yêu cầu hợp pháp của cơ quan nhà nước (Legal Compliance):',
+      text: 'Khi Bộ Công an Việt Nam, tòa án, viện kiểm sát hoặc các cơ quan nhà nước có thẩm quyền khác yêu cầu cung cấp thông tin theo quy định pháp luật để phục vụ điều tra, truy tố, xét xử hoặc thi hành án.'
+    },
+    {
+      label: '2. Bảo vệ tính mạng và sức khỏe (Emergency Situations):',
+      text: 'Trong trường hợp khẩn cấp cần có biện pháp tức thời để bảo vệ tính mạng và sức khỏe của chủ thể dữ liệu (người dùng) hoặc của người khác. (Khoản 1 Điều 17)'
+    },
+    {
+      label: '3. An ninh quốc gia và trật tự công cộng (National Security):',
+      text: 'Khi cơ quan có thẩm quyền yêu cầu nhằm phục vụ quốc phòng, an ninh quốc gia, duy trì trật tự, an toàn xã hội hoặc ứng phó với các tình huống thảm họa quốc gia nghiêm trọng. (Khoản 3 Điều 17)'
+    },
+    {
+      label: '4. Thực hiện hợp đồng và nghĩa vụ pháp lý (Contractual Obligations):',
+      text: 'Trong trường hợp không thể tránh khỏi để thực hiện các nghĩa vụ theo điều khoản sử dụng dịch vụ hoặc để tuân thủ các nghĩa vụ pháp lý được áp dụng đối với nhà cung cấp dịch vụ.'
+    }
+  ]
+} : null;
 
 
 import React from "react";
@@ -18,19 +41,31 @@ function PersonalDataPolicy() {
   const getIntroContent = () => {
     if (language === 'en') {
       return {
-        title: "1. INTRODUCTION",
+        title: "Article 1: What information do users provide to the application?",
         content: [
           {
-            number: "1.1.",
-            text: "This Personal Data Processing Policy describes how VK Entertainment Joint Stock Company (\"VK\") collects, uses, processes, and protects your personal data in accordance with applicable laws. By using our services, you agree to the terms outlined in this policy."
+            type: "normal",
+            text: "This application does not require users to register an account or log in to use the service. Users may freely access and use the application's features without providing personally identifiable information such as full name, address, phone number, or email address."
           },
           {
-            number: "1.2.",
-            text: "Personal data includes any information that can identify you directly or indirectly, such as your name, email, address, and other relevant details."
+            type: "normal",
+            text: "However, for certain features or specific applications, users may be given the option to log in using a Google account or to use a Guest (Anonymous) login."
           },
           {
-            number: "1.3.",
-            text: "VK is committed to ensuring the security and confidentiality of your personal data and will only process it for legitimate purposes as described in this policy."
+            type: "normal",
+            text: "If users choose to log in with a Google account, the Service Provider may receive certain information from Google necessary for authentication and service provision."
+          },
+          {
+            type: "normal",
+            text: "If users choose to use the Guest login, they may use the service without providing personal data, but some features, such as restoring payment or purchase history, may be limited."
+          },
+          {
+            type: "section",
+            text: "[Exceptions related to customer support]"
+          },
+          {
+            type: "normal",
+            text: "However, in cases where users proactively email the developer to report game bugs or request support, the user's email address and contact content may be stored for a limited time for the purpose of processing the request and responding. This information will not be used for any purpose other than customer support and will be deleted according to internal regulations after processing is complete."
           }
         ]
       };
@@ -39,16 +74,28 @@ function PersonalDataPolicy() {
       title: "Điều 1: Người dùng cung cấp những thông tin nào cho ứng dụng?",
       content: [
         {
-          type: "bold",
-          text: "Ứng dụng này không yêu cầu người dùng đăng ký tài khoản hoặc thực hiện thủ tục đăng nhập để sử dụng dịch vụ. Do đó, Nhà cung cấp dịch vụ không yêu cầu và không thu thập các thông tin có thể trực tiếp xác định danh tính cá nhân như họ tên, địa chỉ, số điện thoại hay địa chỉ email. Người dùng có thể tự do sử dụng toàn bộ chức năng của ứng dụng mà không cần cung cấp dữ liệu cá nhân."
+          type: "normal",
+          text: "Ứng dụng này không yêu cầu người dùng đăng ký tài khoản hoặc đăng nhập để sử dụng dịch vụ. Người dùng có thể tự do truy cập và sử dụng các chức năng của ứng dụng mà không cần cung cấp các thông tin có thể xác định danh tính cá nhân như họ tên, địa chỉ, số điện thoại hoặc email."
         },
         {
-          type: "section",
+          type: "normal",
+          text: "Tuy nhiên, đối với một số tính năng hoặc một số ứng dụng nhất định, người dùng có thể được cung cấp tùy chọn đăng nhập bằng tài khoản Google hoặc sử dụng chế độ Khách (Ẩn danh)."
+        },
+        {
+          type: "normal",
+          text: "Nếu người dùng lựa chọn đăng nhập bằng tài khoản Google, Nhà cung cấp dịch vụ có thể nhận một số thông tin từ Google cần thiết cho việc xác thực và cung cấp dịch vụ."
+        },
+        {
+          type: "normal",
+          text: "Nếu người dùng lựa chọn sử dụng chế độ Khách, họ vẫn có thể sử dụng dịch vụ mà không cần cung cấp dữ liệu cá nhân, tuy nhiên một số tính năng như khôi phục lịch sử thanh toán hoặc giao dịch mua vật phẩm có thể bị hạn chế."
+        },
+        {
+          type: "section-bold",
           text: "[Ngoại lệ liên quan đến hỗ trợ khách hàng]"
         },
         {
           type: "normal",
-          text: "Tuy nhiên, trong trường hợp người dùng chủ động gửi email cho nhà phát triển để báo lỗi trò chơi hoặc gửi yêu cầu hỗ trợ, địa chỉ email và nội dung liên hệ của người dùng có thể được lưu trữ trong một khoảng thời gian giới hạn nhằm mục đích xử lý yêu cầu và phản hồi kết quả. Các thông tin này sẽ không được sử dụng cho bất kỳ mục đích nào khác ngoài hỗ trợ khách hàng và sẽ được hủy theo quy định nội bộ sau khi việc xử lý hoàn tất."
+          text: "Tuy nhiên, trong trường hợp người dùng chủ động gửi email cho nhà phát triển để báo lỗi trò chơi hoặc gửi yêu cầu hỗ trợ, địa chỉ email và nội dung liên hệ của người dùng có thể được lưu trữ trong một khoảng thời gian nhất định nhằm mục đích xử lý yêu cầu và phản hồi. Thông tin này sẽ không được sử dụng cho bất kỳ mục đích nào khác ngoài hỗ trợ khách hàng và sẽ được xóa theo quy định nội bộ sau khi hoàn tất xử lý."
         }
       ]
     };
@@ -68,11 +115,11 @@ function PersonalDataPolicy() {
     }
     return {
       title: "Điều 2: Ứng dụng tự động thu thập những thông tin nào?",
-      intro: "Nhằm mục đích cải thiện dịch vụ, phân tích lỗi và cung cấp quảng cáo được cá nhân hóa, trong quá trình sử dụng ứng dụng có thể <b>thông qua các nhà cung cấp dịch vụ bên thứ ba (SDK)</b> tự động tạo ra và thu thập các thông tin sau.",
+      intro: "Nhằm mục đích cải thiện dịch vụ, phân tích lỗi, cung cấp quảng cáo được cá nhân hóa và hỗ trợ một số tính năng nhất định, ứng dụng có thể thu thập các thông tin sau thông qua các nhà cung cấp dịch vụ bên thứ ba (SDK). Các thông tin này được thu thập theo cách không trực tiếp xác định danh tính cá nhân và được xử lý theo chính sách bảo mật của từng nhà cung cấp.",
       items: [
         {
           label: "Thông tin thiết bị:",
-          text: "Tên mẫu thiết bị, phiên bản hệ điều hành (OS), thông tin nhà mạng, cài đặt ngôn ngữ, địa chỉ IP."
+          text: "Tên thiết bị, phiên bản hệ điều hành (OS), thông tin nhà mạng, cài đặt ngôn ngữ, địa chỉ IP."
         },
         {
           label: "Định danh:",
@@ -83,7 +130,7 @@ function PersonalDataPolicy() {
           text: "Lịch sử sử dụng ứng dụng, <b>nhật ký sự cố (Crash Logs), dữ liệu chẩn đoán (Diagnostics)</b> và các dữ liệu khác liên quan đến hiệu suất ứng dụng."
         }
       ],
-      note: "Các thông tin nêu trên được thu thập dưới dạng không trực tiếp xác định danh tính cá nhân và được xử lý theo chính sách bảo mật của các nhà cung cấp dịch vụ bên thứ ba."
+      note: "Ngoài ra, đối với một số tính năng như khôi phục lịch sử thanh toán, nếu người dùng lựa chọn đăng nhập bằng tài khoản Google, Nhà cung cấp dịch vụ có thể thu thập một số thông tin cá nhân giới hạn như địa chỉ email Google và lịch sử mua hàng. Các thông tin này chỉ được thu thập khi người dùng sử dụng các tính năng liên quan và sẽ không được thu thập khi người dùng sử dụng dịch vụ mà không đăng nhập (ví dụ: chế độ Khách)."
     };
   };
 
@@ -101,7 +148,7 @@ function PersonalDataPolicy() {
     }
     return {
       title: "Điều 3: Việc thu thập vị trí chính xác theo thời gian thực",
-      desc: "Ứng dụng <b>không thu thập dữ liệu vị trí chính xác theo thời gian thực dựa trên GPS (Precise Location)</b> của người dùng."
+      desc: "Ứng dụng không thu thập dữ liệu vị trí chính xác theo thời gian thực dựa trên GPS (Precise Location) của người dùng."
     };
   };
 
@@ -160,14 +207,14 @@ function PersonalDataPolicy() {
 
   // Section 6: Third-party services (Vietnamese only)
   const section6 = language !== 'en' ? {
-    title: 'Điều 6: Dịch vụ bên thứ ba',
-    desc1: 'Ứng dụng có thể tích hợp các dịch vụ bên thứ ba nhằm mục đích quảng cáo, phân tích hoặc cải thiện trải nghiệm người dùng. Các dịch vụ này có thể thu thập dữ liệu phi cá nhân hoặc dữ liệu ẩn danh theo chính sách riêng của từng bên.',
-    desc2: 'Danh sách các dịch vụ bên thứ ba phổ biến có thể được tích hợp:',
+    title: 'Điều 6: Chia sẻ thông tin với nhà cung cấp dịch vụ bên thứ ba',
+    desc1: 'Nhà cung cấp dịch vụ, nhằm cải thiện chức năng của ứng dụng, phân tích lỗi và cung cấp quảng cáo được cá nhân hóa, có thể chia sẻ dữ liệu đã được tổng hợp và các mã định danh (ID quảng cáo, thông tin thiết bị, v.v.) với các dịch vụ bên thứ ba (SDK) đáng tin cậy. Dữ liệu của bạn có thể được chuyển và xử lý trên các máy chủ của bên thứ ba đặt ngoài lãnh thổ Việt Nam (như Hoa Kỳ, Singapore, v.v.) để phục vụ việc cung cấp dịch vụ; bằng việc đồng ý với chính sách này, bạn đồng ý với việc chuyển dữ liệu ra nước ngoài như trên. Thông tin này được truyền đi dưới dạng đã được xử lý ẩn danh một phần (pseudonymized), không thể trực tiếp xác định danh tính cá nhân, và được quản lý theo chính sách bảo mật riêng của từng nhà cung cấp dịch vụ bên thứ ba.',
     services: [
-      { name: 'Google AdMob', url: 'https://policies.google.com/privacy' },
-      { name: 'Google Firebase', url: 'https://firebase.google.com/support/privacy' },
-      { name: 'Unity Ads', url: 'https://unity3d.com/legal/privacy-policy' },
-      { name: 'Facebook Audience Network', url: 'https://www.facebook.com/policy.php' },
+      { name: 'Google Play Services', url: 'https://www.google.com/policies/privacy/' },
+      { name: 'AdMob', url: 'https://support.google.com/admob/answer/6128543?hl=ko' },
+      { name: 'Google Analytics for Firebase', url: 'https://firebase.google.com/support/privacy' },
+      { name: 'Firebase Crashlytics', url: 'https://firebase.google.com/support/privacy/' },
+      { name: 'Unity', url: 'https://unity3d.com/legal/privacy-policy' },
     ]
   } : null;
 
@@ -391,7 +438,7 @@ function PersonalDataPolicy() {
             ) : (
               <>
                 <p style={{ fontWeight: 700, marginBottom: 6 }}>
-                  Bắt đầu có hiệu lực từ: <span style={{ fontWeight: 400 }}>30 ngày 1 tháng năm 2026</span>
+                  Bắt đầu có hiệu lực từ: <span style={{ fontWeight: 400 }}>[ngày] [tháng] năm 2026</span>
                 </p>
                 <p style={{ marginBottom: 6 }}>
                   Chính sách xử lý dữ liệu cá nhân này áp dụng cho dịch vụ <b>{
@@ -401,35 +448,26 @@ function PersonalDataPolicy() {
                   }</b> do <b>VK Entertainment</b> (sau đây gọi là “Nhà cung cấp dịch vụ”) cung cấp.
                 </p>
                 <p style={{ marginBottom: 6 }}>
-                  Nhà cung cấp dịch vụ tuân thủ các quy định pháp luật liên quan, bao gồm <b>Nghị định số 13/2023/NĐ-CP của Việt Nam về bảo vệ dữ liệu cá nhân</b>. Chính sách này chỉ có hiệu lực khi người dùng thể hiện sự đồng ý rõ ràng, chẳng hạn như nhấn nút “Đồng ý” trên cửa sổ pop-up được hiển thị khi lần đầu khởi chạy ứng dụng.
+                  Nhà cung cấp dịch vụ tuân thủ các quy định pháp luật liên quan, bao gồm <b>Nghị định số 13/2023/NĐ-CP của Việt Nam về bảo vệ dữ liệu cá nhân</b>.
+                </p>
+                <p style={{ marginBottom: 6 }}>
+                  Chính sách này chỉ có hiệu lực khi người dùng thể hiện sự đồng ý rõ ràng, ví dụ như nhấn nút “Đồng ý” trên cửa sổ pop-up xuất hiện khi lần đầu khởi chạy ứng dụng.
                 </p>
               </>
             )}
           </div>
           {/* Nội dung chính */}
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15 }}>{language === 'en' ? 'Article 1: What information do users provide to the application?' : intro.title}</h2>
-            {language === 'en' ? (
-              <>
-                <p style={{ marginBottom: 12, textAlign: "justify" }}>
-                  This application <b>does not require users to register an account or log in</b> to use the service. Therefore, the Service Provider <b>does not request and does not collect</b> information that could directly identify an individual, such as full name, address, phone number, or email address. Users are <b>free to use all the application's functions without providing personal data.</b>
-                </p>
-                <p style={{ fontWeight: 700, marginBottom: 8, textAlign: "justify" }}>[Exceptions related to customer support]</p>
-                <p style={{ marginBottom: 12, textAlign: "justify" }}>
-                  However, in cases where users proactively email the developer to report game bugs or request support, the user's email address and contact content may be stored for a limited time for the purpose of processing the request and responding. This information will not be used for any purpose other than customer support and will be deleted according to internal regulations after processing is complete.
-                </p>
-              </>
-            ) : (
-              <>
-                <p style={{  marginBottom: 12, textAlign: "justify" }}>
-                  Ứng dụng này <b>không yêu cầu người dùng đăng ký tài khoản hoặc thực hiện thủ tục đăng nhập</b> để sử dụng dịch vụ. Do đó, Nhà cung cấp dịch vụ <b>không yêu cầu và không thu thập</b> các thông tin có thể trực tiếp xác định danh tính cá nhân như họ tên, địa chỉ, số điện thoại hay địa chỉ email. Người dùng có thể <b>tự do sử dụng toàn bộ chức năng của ứng dụng mà không cần cung cấp dữ liệu cá nhân.</b>
-                </p>
-                <p style={{ fontWeight: 700, marginBottom: 8, textAlign: "justify" }}>[Ngoại lệ liên quan đến hỗ trợ khách hàng]</p>
-                <p style={{ marginBottom: 12, textAlign: "justify" }}>
-                  Tuy nhiên, trong <b>trường hợp người dùng chủ động gửi email cho nhà phát triển</b> để báo lỗi trò chơi hoặc gửi yêu cầu hỗ trợ, địa chỉ email và nội dung liên hệ của người dùng có thể được lưu trữ trong một khoảng thời gian giới hạn nhằm mục đích xử lý yêu cầu và phản hồi kết quả. Các thông tin này sẽ không được sử dụng cho bất kỳ mục đích nào khác ngoài hỗ trợ khách hàng và sẽ được hủy theo quy định nội bộ sau khi việc xử lý hoàn tất.
-                </p>
-              </>
-            )}
+            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15 }}>{intro.title}</h2>
+            {intro.content.map((item, idx) => {
+              if (item.type === "section-bold") {
+                return <div key={idx} style={{ fontWeight: 700, marginBottom: 8, textAlign: "justify" }}>{item.text}</div>;
+              }
+              if (item.type === "normal-bold") {
+                return <div key={idx} style={{ marginBottom: 12, textAlign: "justify", fontWeight: 700 }}>{item.text}</div>;
+              }
+              return <div key={idx} style={{ marginBottom: 12, textAlign: "justify" }}>{item.text}</div>;
+            })}
           </div>
 
           <div style={{ marginBottom: 30 }}>
