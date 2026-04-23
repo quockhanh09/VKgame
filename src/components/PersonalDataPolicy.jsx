@@ -187,12 +187,23 @@ function PersonalDataPolicy() {
   const getSection2Content = () => {
     if (language === 'en') {
       return {
-        title: "2. WHAT PERSONAL DATA DO WE COLLECT?",
+        title: "Article 2: What Information Does the Application Automatically Collect?",
+        intro: "For the purpose of improving services, analyzing errors, providing personalized advertising, and supporting certain features, the application may collect the following information through third-party service providers (SDKs). This information is collected in a manner that does not directly identify individuals and is processed in accordance with the privacy policies of the respective providers.",
         items: [
-          "Full name, email address, phone number, date of birth, address.",
-          "Identification documents (ID card, Passport, etc.).",
-          "Account information, payment information, and any other information you provide when using our services."
-        ]
+          {
+            label: "Device Information:",
+            text: "Device model name, operating system (OS) version, carrier information, language settings, IP address."
+          },
+          {
+            label: "Identifiers:",
+            text: "Advertising identifier (Google ADID), App Set ID, Android ID (used only for limited purposes such as fraud prevention, etc.)."
+          },
+          {
+            label: "Application Activity and Performance Information:",
+            text: "Application usage history, crash logs, diagnostic data, and other data related to application performance."
+          }
+        ],
+        note: "In addition, for certain features such as restoring purchase history, if users choose to log in with a Google account, the Service Provider may collect limited personal information such as the user's Google email address and purchase history. This information is collected only when the user uses the relevant feature and is not collected when using the service without logging in (e.g., Guest mode)."
       };
     }
     return {
@@ -553,40 +564,42 @@ function PersonalDataPolicy() {
           </div>
 
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15 }}>{language === 'en' ? 'Article 2: What Information Does the Application Automatically Collect?' : section2.title}</h2>
-            {language === 'en' ? (
-              <>
-                <p style={{ marginBottom: 10, textAlign: "justify" }}>
-                  For the purpose of improving services, analyzing errors, and providing personalized advertising, the application may, through <b>third-party service providers (SDKs)</b>, automatically generate and collect the following information during use:
-                </p>
-                <ul style={{ paddingLeft: 24, marginBottom: 10 }}>
-                  <li style={{ marginBottom: 8, textAlign: "justify" }}>
-                    <b>Device Information:</b> Device model name, operating system (OS) version, carrier information, language settings, IP address.
+              <h2 style={{ fontSize: 18, fontWeight: 700, marginBottom: 12, textAlign: 'left', fontFamily: 'Arial, sans-serif' }}>{section2.title}</h2>
+              <div style={{ marginBottom: 10, textAlign: 'justify', fontFamily: 'Arial, sans-serif', fontSize: 16 }}>
+                {section2.intro}
+              </div>
+              <ul style={{ paddingLeft: 32, marginBottom: 10, fontFamily: 'Arial, sans-serif', fontSize: 16 }}>
+                {section2.items.map((item, idx) => (
+                  <li key={idx} style={{ marginBottom: 8, textAlign: 'justify' }}>
+                    <span style={{ fontWeight: 700 }}>
+                      {item.label}
+                    </span>
+                    <span> {item.text}</span>
                   </li>
-                  <li style={{ marginBottom: 8, textAlign: "justify" }}>
-                    <b>Identifiers:</b> Advertising identifier (Google <b>ADID</b>), App Set ID, Android ID (used only for limited purposes such as fraud prevention, etc.).
-                  </li>
-                  <li style={{ marginBottom: 8, textAlign: "justify" }}>
-                    <b>Application Activity and Performance Information:</b> Application usage history, <b>crash logs, diagnostic data</b>, and other data related to application performance.
-                  </li>
-                </ul>
-                <p style={{ fontSize: 16, marginBottom: 0, textAlign: "justify" }}>
-                  The above information is collected in a way that does not directly identify individuals and is processed according to the privacy policies of the third-party service providers.
-                </p>
-              </>
-            ) : (
-              <>
-                <p style={{ marginBottom: 10, textAlign: "justify" }} dangerouslySetInnerHTML={{__html: section2.intro}} />
-                <ul style={{ paddingLeft: 24, marginBottom: 10 }}>
-                  {section2.items.map((item, idx) => (
-                    <li key={idx} style={{ marginBottom: 8, textAlign: "justify" }}>
-                      <b>{item.label}</b> {item.text.includes('<b>') ? <span dangerouslySetInnerHTML={{__html: item.text}} /> : item.text}
-                    </li>
-                  ))}
-                </ul>
-                <p style={{ fontSize: 16, marginBottom: 0, textAlign: "justify" }}>{section2.note}</p>
-              </>
-            )}
+                ))}
+              </ul>
+              {section2.note && (() => {
+                // Tách note thành 2 đoạn theo dấu chấm. Nếu có nhiều hơn 2 câu, câu 2 và sau sẽ gộp lại.
+                const sentences = section2.note.split('. ');
+                if (sentences.length >= 2) {
+                  return (
+                    <>
+                      <div style={{ marginBottom: 4, textAlign: 'justify', fontFamily: 'Arial, sans-serif', fontSize: 16 }}>
+                        {sentences[0].endsWith('.') ? sentences[0] : sentences[0] + '.'}
+                      </div>
+                      <div style={{ marginBottom: 10, textAlign: 'justify', fontFamily: 'Arial, sans-serif', fontSize: 16 }}>
+                        {sentences.slice(1).join('. ')}
+                      </div>
+                    </>
+                  );
+                } else {
+                  return (
+                    <div style={{ marginBottom: 10, textAlign: 'justify', fontFamily: 'Arial, sans-serif', fontSize: 16 }}>
+                      {section2.note}
+                    </div>
+                  );
+                }
+              })()}
           </div>
 
           <div style={{ marginBottom: 30 }}>
