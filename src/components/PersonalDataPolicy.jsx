@@ -553,7 +553,7 @@ function PersonalDataPolicy() {
           <div style={{ marginBottom: 30 }}>
             <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 15 }}>{intro.title}</h2>
             {intro.content.map((item, idx) => {
-              if (item.type === "section-bold") {
+              if (item.type === "section-bold" || item.type === "section") {
                 return <div key={idx} style={{ fontWeight: 700, marginBottom: 8, textAlign: "justify" }}>{item.text}</div>;
               }
               if (item.type === "normal-bold") {
