@@ -1,26 +1,102 @@
-// Điều 7: Công bố thông tin theo yêu cầu pháp lý và bảo vệ quyền lợi
-const section7 = language !== 'en' ? {
-  title: 'Điều 7: Công bố thông tin theo yêu cầu pháp lý và bảo vệ quyền lợi',
-  intro: 'Về nguyên tắc, nhà cung cấp dịch vụ (và nhà phát hành tại Việt Nam) không công bố thông tin cá nhân của bạn cho bên thứ ba khi chưa có sự đồng ý của bạn. Tuy nhiên, căn cứ theo Điều 17 Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân của Việt Nam, trong các trường hợp sau, thông tin cá nhân có thể được xử lý hoặc cung cấp cho cơ quan có thẩm quyền mà không cần sự đồng ý riêng của chủ thể dữ liệu:',
-  items: [
-    {
-      label: '1. Yêu cầu hợp pháp của cơ quan nhà nước (Legal Compliance):',
-      text: 'Khi Bộ Công an Việt Nam, tòa án, viện kiểm sát hoặc các cơ quan nhà nước có thẩm quyền khác yêu cầu cung cấp thông tin theo quy định pháp luật để phục vụ điều tra, truy tố, xét xử hoặc thi hành án.'
-    },
-    {
-      label: '2. Bảo vệ tính mạng và sức khỏe (Emergency Situations):',
-      text: 'Trong trường hợp khẩn cấp cần có biện pháp tức thời để bảo vệ tính mạng và sức khỏe của chủ thể dữ liệu (người dùng) hoặc của người khác. (Khoản 1 Điều 17)'
-    },
-    {
-      label: '3. An ninh quốc gia và trật tự công cộng (National Security):',
-      text: 'Khi cơ quan có thẩm quyền yêu cầu nhằm phục vụ quốc phòng, an ninh quốc gia, duy trì trật tự, an toàn xã hội hoặc ứng phó với các tình huống thảm họa quốc gia nghiêm trọng. (Khoản 3 Điều 17)'
-    },
-    {
-      label: '4. Thực hiện hợp đồng và nghĩa vụ pháp lý (Contractual Obligations):',
-      text: 'Trong trường hợp không thể tránh khỏi để thực hiện các nghĩa vụ theo điều khoản sử dụng dịch vụ hoặc để tuân thủ các nghĩa vụ pháp lý được áp dụng đối với nhà cung cấp dịch vụ.'
+// ...existing code...
+    function getSection9(language) {
+      return language !== 'en' ? {
+        title: 'Điều 9: Chính sách lưu trữ dữ liệu là gì và bạn có thể quản lý thông tin như thế nào?',
+        items: [
+            {
+              label: '1. Data Storage Location',
+              text: 'Game Data: All game progress data (levels, items, etc.) is stored in the internal memory of your mobile device.\nFor applications or features that provide account-based services (such as Google login), if users choose to log in, certain personal information (such as Google email address and purchase history) may be stored on the Service Provider’s servers for the purpose of providing and maintaining such features (e.g., purchase restoration).\nServer Log Exception: During communication with the server to ensure service stability, security, and version testing, access logs such as IP addresses may be temporarily recorded. This information is used only for security purposes and will be automatically and permanently deleted after a certain period of time.'
+            },
+            {
+              label: '2. Third-Party Data Processing',
+              text: 'To provide in-app advertising (AdMob) and error analysis (Firebase), this application allows verified third-party services to collect information from your device such as Ad ID (ADID), cookies, device information, etc. This data may be transmitted to and processed on servers located outside your country (e.g., Google), in accordance with applicable laws and regulations, and is protected in accordance with the privacy policies of each provider.'
+            },
+            {
+              label: '3. Data Retention Period and Data Deletion Procedure',
+              text: 'Data deletion and related rights may be exercised as follows:\nLocal data deletion: All game data stored on the device will be permanently deleted and cannot be recovered when the user uninstalls the application or clears application data via device settings.\nServer data deletion (if applicable): For users who have logged in using account-based features (e.g., Google login), personal data stored on the server (such as Google email address and purchase history) may be deleted upon user request. Users may contact the Service Provider via the designated support channel to request data deletion.\nThird-party data deletion: Data collected by third parties (such as advertising identifiers) can be controlled by the user through device settings (e.g., resetting advertising IDs) and will be deleted according to each provider’s data retention policy.'
+            },
+            {
+              label: '4. User rights exercise',
+              text: 'Users may stop data collection at any time by uninstalling the application or choosing to use the service without logging in (where applicable).'
+            }
+        ]
+      } : null;
     }
-  ]
-} : null;
+
+    function getSection8En() {
+      return {
+        title: 'Article 8: What is the right to opt out of data collection?',
+        intro: 'You can withdraw or refuse consent to the collection and use of personal data at any time through the following methods:',
+        items: [
+          {
+            label: '1. Uninstalling the application (stopping all data collection):',
+            text: 'You can immediately stop all data collection by uninstalling the application. Uninstallation can be done through the standard uninstallation process of your mobile device or through the app store (such as Google Play).'
+          },
+          {
+            label: '2. Using the service without logging in:',
+            text: 'For applications that provide a login feature, users may choose to use the service without logging in (e.g., Guest or Anonymous mode). In such cases, personal information related to account-based features (such as Google account information and purchase history) will not be collected. If you have previously logged in using a Google account, you may stop further collection of such information by logging out or by using the service without logging in, depending on the functionality provided by the application.'
+          },
+          {
+            label: '3. Opt out of personalized advertising (blocking advertising identifiers):',
+            text: 'Even without uninstalling the application, you can still block the collection of advertising identifiers (Advertising IDs) used for personalized advertising through your mobile device settings.\n\n- Android: Settings > Google > Ads > Delete Ad ID or Reset Ad ID (The exact path may vary depending on your Android operating system version.)'
+          },
+          {
+            label: '4. Changing access settings:',
+            text: 'In the Settings > App Management menu of your mobile device, you can revoke access permissions granted to an app. However, revoking mandatory permissions may restrict service usage.'
+          }
+        ]
+      };
+    }
+
+function getSection8(language) {
+  return language !== 'en' ? {
+    title: 'Điều 8: Quyền từ chối thu thập dữ liệu (Opt-out) là gì?',
+    intro: 'Bạn có thể rút lại hoặc từ chối sự đồng ý đối với việc thu thập và sử dụng dữ liệu cá nhân bất cứ lúc nào thông qua các cách sau:',
+    items: [
+      {
+        label: '1. Gỡ cài đặt ứng dụng (dừng mọi hoạt động thu thập):',
+        text: 'Bạn có thể ngay lập tức dừng toàn bộ việc thu thập thông tin của ứng dụng bằng cách gỡ cài đặt (Uninstall) ứng dụng. Việc gỡ có thể thực hiện thông qua quy trình gỡ cài đặt tiêu chuẩn của thiết bị di động hoặc thông qua cửa hàng ứng dụng (như Google Play).'
+      },
+      {
+        label: '2. Sử dụng dịch vụ mà không đăng nhập:',
+        text: 'Đối với các ứng dụng có cung cấp tính năng đăng nhập, người dùng có thể lựa chọn sử dụng dịch vụ mà không cần đăng nhập (ví dụ: chế độ Khách hoặc Ẩn danh). Trong trường hợp này, các thông tin cá nhân liên quan đến tính năng tài khoản (như thông tin tài khoản Google và lịch sử mua hàng) sẽ không được thu thập. Nếu người dùng trước đó đã đăng nhập bằng tài khoản Google, việc thu thập các thông tin này có thể được dừng lại bằng cách đăng xuất hoặc sử dụng dịch vụ mà không đăng nhập, tùy theo chức năng mà ứng dụng cung cấp.'
+      },
+      {
+        label: '3. Từ chối quảng cáo được cá nhân hóa (chặn mã định danh quảng cáo):',
+        text: 'Ngay cả khi không gỡ cài đặt ứng dụng, bạn vẫn có thể chặn việc thu thập mã định danh quảng cáo (Advertising ID) dùng cho quảng cáo được cá nhân hóa thông qua cài đặt của thiết bị di động.\n\n- Android: Cài đặt (Settings) > Google > Quảng cáo (Ads) > Xóa ID quảng cáo hoặc Đặt lại ID quảng cáo\n  (Đường dẫn cài đặt có thể khác nhau tùy theo phiên bản hệ điều hành.)'
+      },
+      {
+        label: '4. Thay đổi quyền truy cập:',
+        text: 'Trong menu Cài đặt > Quản lý ứng dụng của thiết bị di động, bạn có thể thu hồi các quyền truy cập đã cấp cho ứng dụng. Tuy nhiên, nếu thu hồi các quyền bắt buộc, việc sử dụng dịch vụ có thể bị hạn chế.'
+      }
+    ]
+  } : null;
+}
+
+function getSection7(language) {
+  return language !== 'en' ? {
+    title: 'Điều 7: Công bố thông tin theo yêu cầu pháp lý và bảo vệ quyền lợi',
+    intro: 'Về nguyên tắc, nhà cung cấp dịch vụ (và nhà phát hành tại Việt Nam) không công bố thông tin cá nhân của bạn cho bên thứ ba khi chưa có sự đồng ý của bạn. Tuy nhiên, căn cứ theo Điều 17 Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân của Việt Nam, trong các trường hợp sau, thông tin cá nhân có thể được xử lý hoặc cung cấp cho cơ quan có thẩm quyền mà không cần sự đồng ý riêng của chủ thể dữ liệu:',
+    items: [
+      {
+        label: '1. Yêu cầu hợp pháp của cơ quan nhà nước (Legal Compliance):',
+        text: 'Khi Bộ Công an Việt Nam, tòa án, viện kiểm sát hoặc các cơ quan nhà nước có thẩm quyền khác yêu cầu cung cấp thông tin theo quy định pháp luật để phục vụ điều tra, truy tố, xét xử hoặc thi hành án.'
+      },
+      {
+        label: '2. Bảo vệ tính mạng và sức khỏe (Emergency Situations):',
+        text: 'Trong trường hợp khẩn cấp cần có biện pháp tức thời để bảo vệ tính mạng và sức khỏe của chủ thể dữ liệu (người dùng) hoặc của người khác. (Khoản 1 Điều 17)'
+      },
+      {
+        label: '3. An ninh quốc gia và trật tự công cộng (National Security):',
+        text: 'Khi cơ quan có thẩm quyền yêu cầu nhằm phục vụ quốc phòng, an ninh quốc gia, duy trì trật tự, an toàn xã hội hoặc ứng phó với các tình huống thảm họa quốc gia nghiêm trọng. (Khoản 3 Điều 17)'
+      },
+      {
+        label: '4. Thực hiện hợp đồng và nghĩa vụ pháp lý (Contractual Obligations):',
+        text: 'Trong trường hợp không thể tránh khỏi để thực hiện các nghĩa vụ theo điều khoản sử dụng dịch vụ hoặc để tuân thủ các nghĩa vụ pháp lý được áp dụng đối với nhà cung cấp dịch vụ.'
+      }
+    ]
+  } : null;
+}
 
 
 import React from "react";
@@ -36,6 +112,12 @@ function PersonalDataPolicy() {
   const navigate = useNavigate();
   const params = useParams();
   const { language } = useLanguage();
+
+  // Now, use language to get sections
+  const section9 = getSection9(language);
+  const section8En = getSection8En();
+  const section8 = getSection8(language);
+  const section7 = getSection7(language);
 
   // Section 1: Introduction
   const getIntroContent = () => {
@@ -882,22 +964,22 @@ function PersonalDataPolicy() {
             {language === 'en' ? (
               <>
                 <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  1. Device-Level Security
+                  Device-Level Security
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  This application, in principle, does not transmit users' personal information to the developer's servers but only stores it in the internal memory of the mobile device. Therefore, data is protected at the first level by the <b>sandbox mechanism and encryption system</b> of the Android operating system.
+                  This application, in principle, does not transmit users' personal information to the developer's servers but only stores it in the internal memory of the mobile device. Therefore, data is protected at the first level by the sandbox mechanism and encryption system of the Android operating system.
                 </div>
                 <div style={{ fontSize: 16, marginBottom: 8, marginLeft: 16, fontStyle: 'italic', color: '#222' }}>
                   <b>Note:</b> In the case of rooting the device or using a modified operating system, these security mechanisms may be disabled; the service provider is not responsible for data leakage risks arising from these cases.
                 </div>
                 <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  2. Encryption in Transit
+                  Encryption in Transit
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  All data generated during communication with third-party services necessary for the application's operation (such as Google AdMob, Firebase, etc.), including IP addresses, ad IDs, etc., is encrypted during transmission via the secure <b>HTTPS protocol (SSL/TLS)</b>. This measure aims to prevent third parties from intercepting or eavesdropping on data during transmission.
+                  All data generated during communication with third-party services necessary for the application's operation (such as Google AdMob, Firebase, etc.), including IP addresses, ad IDs, etc., is encrypted during transmission via the secure HTTPS protocol (SSL/TLS). This measure aims to prevent third parties from intercepting or eavesdropping on data during transmission.
                 </div>
                 <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  3. Organizational Measures
+                  Organizational Measures
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
                   To comply with Vietnamese personal data protection laws (Decree 13/2023/ND-CP), the service provider applies the following organizational measures:
@@ -911,7 +993,7 @@ function PersonalDataPolicy() {
                   </li>
                 </ul>
                 <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  4. Limitations of security
+                  Limitations of security
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 0, textAlign: 'justify' }}>
                   While we strive to implement industry-standard security measures, please note that data transmission over the Internet or electronic storage cannot guarantee 100% security.
@@ -1041,7 +1123,7 @@ function PersonalDataPolicy() {
                   1. Explicit Consent
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  This application complies with Vietnam's Personal Data Protection Decree (Decree 13) and will not process any personal data without your express consent. When first launching the application, you confirm that you fully understand and agree to the contents of this Privacy Policy (types of data collected, purposes, sharing with third parties, etc.) by <b>pressing the [I Agree] button or selecting the checkbox</b> in the consent pop-up window.
+                  This application complies with Vietnam's Personal Data Protection Decree (Decree 13) and will not process any personal data without your express consent. When first launching the application, you confirm that you fully understand and agree to the contents of this Privacy Policy (types of data collected, purposes, sharing with third parties, etc.) by pressing the [I Agree] button or selecting the checkbox in the consent pop-up window.
                 </div>
                 <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
                   2. Silence or lack of response will not be considered consent
@@ -1107,7 +1189,7 @@ function PersonalDataPolicy() {
                   You can submit any complaints related to personal data protection arising during the use of the application (such as requests for data deletion, restrictions on processing, withdrawal of consent, etc.) to the contact information above.
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  To comply with legal obligations, the service provider will respond with the processing results or progress updates <b>within 72 hours of receiving the request</b>, especially for requests regarding data deletion (Article 16) and restrictions on processing (Article 9).
+                  To comply with legal obligations, the service provider will respond with the processing results or progress updates within 72 hours of receiving the request, especially for requests regarding data deletion (Article 16) and restrictions on processing (Article 9).
                 </div>
                 <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
                   3. Resolving Infringement of Rights
@@ -1115,7 +1197,7 @@ function PersonalDataPolicy() {
                 <div style={{ fontSize: 17, marginBottom: 0, textAlign: 'justify' }}>
                   If you believe that the service provider's self-correction measures are insufficient to remedy the damage caused by the breach of personal data, or require assistance from Vietnamese authorities, you can contact the following agency:
                   <ul style={{ marginTop: 8, marginBottom: 0, marginLeft: 32, listStyleType: 'disc', fontSize: 17 }}>
-                    <li><b>Cyber ​​Security and High-Tech Crime Prevention Department – ​​Ministry of Public Security of Vietnam (A05):</b> [Website or related guidance information]</li>
+                    <li><b>Cyber Security and High-Tech Crime Prevention Department – Ministry of Public Security of Vietnam (A05):</b> [Website or related guidance information]</li>
                   </ul>
                 </div>
               </>
