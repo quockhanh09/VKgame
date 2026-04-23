@@ -1,26 +1,54 @@
 // ...existing code...
     function getSection9(language) {
-      return language !== 'en' ? {
-        title: 'Điều 9: Chính sách lưu trữ dữ liệu là gì và bạn có thể quản lý thông tin như thế nào?',
-        items: [
+      if (language === 'en') {
+        return {
+          title: 'Article 9: What is the data storage policy and how can you manage your information?',
+          items: [
             {
-              label: '1. Data Storage Location',
-              text: 'Game Data: All game progress data (levels, items, etc.) is stored in the internal memory of your mobile device.\nFor applications or features that provide account-based services (such as Google login), if users choose to log in, certain personal information (such as Google email address and purchase history) may be stored on the Service Provider’s servers for the purpose of providing and maintaining such features (e.g., purchase restoration).\nServer Log Exception: During communication with the server to ensure service stability, security, and version testing, access logs such as IP addresses may be temporarily recorded. This information is used only for security purposes and will be automatically and permanently deleted after a certain period of time.'
+              label: 'Data Storage Location',
+              text: `<b>Game Data:</b> All game progress data (levels, items, etc.) is stored in the internal memory of your mobile device.<br/><br/>
+              For applications or features that provide account-based services (such as Google login), if users choose to log in and make in-app purchases, certain personal information, specifically the user’s Google email address and item purchase history (receipt), will be collected and stored on the Service Provider’s servers for the purpose of providing and maintaining such features (e.g., purchase restoration).<br/><br/>
+              <b>Server Log Exception:</b> During communication with the server to ensure service stability, security, and version testing, access logs such as IP addresses may be temporarily recorded. This information is used only for security purposes and will be automatically and permanently deleted after a certain period of time.`
             },
             {
               label: '2. Third-Party Data Processing',
-              text: 'To provide in-app advertising (AdMob) and error analysis (Firebase), this application allows verified third-party services to collect information from your device such as Ad ID (ADID), cookies, device information, etc. This data may be transmitted to and processed on servers located outside your country (e.g., Google), in accordance with applicable laws and regulations, and is protected in accordance with the privacy policies of each provider.'
+              text: `To provide in-app advertising (AdMob) and error analysis (Firebase), this application allows verified third-party services to collect information from your device such as Ad ID (ADID), cookies, device information, etc. This data may be transmitted to and processed on servers located outside your country (e.g., Google), in accordance with applicable laws and regulations, and is protected in accordance with the privacy policies of each provider.`
             },
             {
               label: '3. Data Retention Period and Data Deletion Procedure',
-              text: 'Data deletion and related rights may be exercised as follows:\nLocal data deletion: All game data stored on the device will be permanently deleted and cannot be recovered when the user uninstalls the application or clears application data via device settings.\nServer data deletion (if applicable): For users who have logged in using account-based features (e.g., Google login), personal data stored on the server (such as Google email address and purchase history) may be deleted upon user request. Users may contact the Service Provider via the designated support channel to request data deletion.\nThird-party data deletion: Data collected by third parties (such as advertising identifiers) can be controlled by the user through device settings (e.g., resetting advertising IDs) and will be deleted according to each provider’s data retention policy.'
-            },
-            {
-              label: '4. User rights exercise',
-              text: 'Users may stop data collection at any time by uninstalling the application or choosing to use the service without logging in (where applicable).'
+              text: `Data deletion and related rights may be exercised as follows:<br/>
+              <b>Local data deletion:</b> All game data stored on the device will be permanently deleted and cannot be recovered when the user uninstalls the application or clears application data via device settings.<br/><br/>
+              <b>Server data deletion (if applicable):</b> If you have logged in using a Google account and your Google email address and item purchase history (receipt) have been stored on the server, you may request deletion of such data by contacting the Service Provider at: cskh.game@vkentertainment.vn.<br/><br/>
+              <b>Third-party data deletion:</b> Data collected by third parties (such as advertising identifiers) can be controlled by the user through device settings (e.g., resetting advertising IDs) and will be deleted according to each provider’s data retention policy.<br/><br/>
+              <b>User rights exercise:</b> Users may stop data collection at any time by uninstalling the application or choosing to use the service without logging in (where applicable).`
             }
+          ]
+        };
+      }
+      // ... giữ nguyên tiếng Việt như cũ ...
+      return {
+        title: 'Điều 9: Chính sách lưu trữ dữ liệu là gì và bạn có thể quản lý thông tin như thế nào?',
+        items: [
+          {
+            label: '1. Vị trí lưu trữ dữ liệu',
+            text: `<b>Dữ liệu trò chơi:</b> Toàn bộ dữ liệu tiến trình trò chơi (cấp độ, vật phẩm, v.v.) được lưu trữ trong bộ nhớ nội bộ của thiết bị di động của người dùng.<br/><br/>
+            Đối với các ứng dụng hoặc tính năng có cung cấp dịch vụ dựa trên tài khoản (ví dụ: đăng nhập Google), nếu người dùng lựa chọn đăng nhập và thực hiện mua hàng trong ứng dụng, một số thông tin cá nhân nhất định, cụ thể là địa chỉ email Google của người dùng và lịch sử mua vật phẩm (biên nhận), sẽ được thu thập và lưu trữ trên máy chủ của Nhà cung cấp dịch vụ nhằm phục vụ việc cung cấp và duy trì các tính năng liên quan (ví dụ: khôi phục giao dịch).<br/><br/>
+            <b>Ngoại lệ về nhật ký máy chủ:</b> Trong quá trình giao tiếp với máy chủ nhằm đảm bảo tính ổn định, bảo mật và kiểm thử phiên bản dịch vụ, các nhật ký truy cập như địa chỉ IP có thể được ghi nhận tạm thời. Thông tin này chỉ được sử dụng cho mục đích bảo mật và sẽ được tự động xóa vĩnh viễn sau một khoảng thời gian nhất định.`
+          },
+          {
+            label: '2. Thu thập tự động bởi dịch vụ bên thứ ba (Third-Party Data Processing)',
+            text: `Để cung cấp quảng cáo trong ứng dụng (AdMob) và phân tích lỗi (Firebase), ứng dụng cho phép các dịch vụ bên thứ ba đã được xác thực thu thập thông tin từ thiết bị của người dùng như mã định danh quảng cáo (ADID), cookie, thông tin thiết bị, v.v. Dữ liệu này có thể được truyền và xử lý trên các máy chủ đặt ngoài quốc gia của người dùng (ví dụ: Google), tuân thủ quy định của Bộ Thông tin và Truyền thông Việt Nam phù hợp với các quy định pháp luật hiện hành và được bảo vệ theo chính sách bảo mật của từng nhà cung cấp.`
+          },
+          {
+            label: '3. Thời hạn lưu trữ dữ liệu và quy trình hủy dữ liệu',
+            text: `Việc xóa dữ liệu và thực hiện các quyền liên quan được áp dụng như sau:<br/>
+            <b>Xóa dữ liệu trên thiết bị:</b> Toàn bộ dữ liệu trò chơi lưu trên thiết bị sẽ bị xóa vĩnh viễn và không thể khôi phục khi người dùng gỡ cài đặt ứng dụng hoặc xóa dữ liệu ứng dụng trong cài đặt thiết bị.<br/><br/>
+            <b>Xóa dữ liệu trên máy chủ (nếu có):</b> Nếu người dùng đã đăng nhập bằng tài khoản Google và dữ liệu như địa chỉ email Google và lịch sử mua vật phẩm (biên nhận) đã được lưu trữ trên máy chủ, người dùng có thể yêu cầu xóa các dữ liệu này bằng cách liên hệ với Nhà cung cấp dịch vụ qua địa chỉ: cskh.game@vkentertainment.vn<br/><br/>
+            <b>Hủy dữ liệu của bên thứ ba:</b> Dữ liệu do bên thứ ba thu thập (như mã định danh quảng cáo) có thể được người dùng kiểm soát thông qua cài đặt thiết bị (ví dụ: đặt lại ID quảng cáo) và sẽ được xóa theo chính sách lưu trữ dữ liệu của từng nhà cung cấp.<br/><br/>
+            <b>Thực hiện quyền của người dùng:</b> Người dùng có thể ngừng việc thu thập dữ liệu bất kỳ lúc nào bằng cách gỡ cài đặt ứng dụng hoặc lựa chọn sử dụng dịch vụ mà không đăng nhập (nếu có).`
+          }
         ]
-      } : null;
+      };
     }
 
     function getSection8En() {
@@ -812,94 +840,91 @@ function PersonalDataPolicy() {
             )}
           </div>
           {/* Điều 9 - Chính sách lưu trữ dữ liệu */}
-          <div style={{ marginBottom: 40 }}>
-            <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, lineHeight: 1.3 }}>
-              {language === 'en'
-                ? 'Article 9: What is the data storage policy and how can you manage your information?'
-                : 'Điều 9: Chính sách lưu trữ dữ liệu là gì và bạn có thể quản lý thông tin như thế nào?'}
-            </h2>
-            {language === 'en' ? (
-              <>
-                <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  1. Data Storage Location and Non-Collection Principle
-                </div>
-                <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  This service is a non-account-based service. The service provider does not collect or store personally identifiable information such as your name, email, or phone number on its servers.
-                </div>
-                <ul style={{ fontSize: 17, marginLeft: 24, marginBottom: 8, textAlign: 'justify', listStyleType: 'disc' }}>
-                  <li style={{ marginBottom: 4 }}>
-                    <b>Game Data:</b> All game progress data (levels, items, etc.) is stored only in the internal memory of your mobile device.
-                  </li>
-                  <li>
-                    <b>Server Log Exception:</b> During communication with the server to ensure service stability, security, and version testing, access logs such as IP addresses may be temporarily recorded. This information is used only for security purposes and will be automatically and permanently deleted after a certain period of time.
-                  </li>
-                </ul>
-                <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  2. Third-Party Data Processing
-                </div>
-                <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  To provide in-app advertising (AdMob) and error analysis (Firebase), this application allows verified third-party services to collect information from your device such as Ad ID (ADID), cookies, device information, etc. This data may be transmitted and processed on servers overseas (such as Google), in compliance with the regulations of the Vietnamese Ministry of Information and Communications and relevant laws, and is protected according to the policies of each provider.
-                </div>
-                <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  3. Data Retention Period and Data Deletion Procedure
-                </div>
-                <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  Since the service provider does not directly store users' personal information, no separate retention period is set. Data deletion and related rights exercise follow these principles:
-                </div>
-                <ul style={{ fontSize: 17, marginLeft: 24, marginBottom: 0, textAlign: 'justify', listStyleType: 'disc' }}>
-                  <li style={{ marginBottom: 8 }}>
-                    <b>Local data deletion:</b> As soon as the user uninstalls the application or performs a “data deletion” in the device settings, <b>all game data stored on the device will be permanently deleted and cannot be recovered.</b>
-                  </li>
-                  <li style={{ marginBottom: 8 }}>
-                    <b>Third-party data deletion:</b> Data collected by third parties, such as advertising IDs, can be controlled by the user through device settings (e.g., resetting advertising IDs) and will be automatically deleted according to the data storage policy of each third-party service (e.g., Google Analytics data retention settings).
-                  </li>
-                  <li>
-                    <b>User rights exercise:</b> Since this service does not create user accounts on the server, there is no need to send a separate “membership cancellation” request. As soon as the application is uninstalled, the service contract will terminate and data collection will stop.
-                  </li>
-                </ul>
-              </>
-            ) : (
-              <>
-                <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  1. Vị trí lưu trữ dữ liệu và nguyên tắc không thu thập
-                </div>
-                <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  Dịch vụ này là dịch vụ không yêu cầu tạo tài khoản (Non-account based service). Nhà cung cấp dịch vụ không thu thập hoặc lưu trữ trên máy chủ của mình các thông tin có thể nhận dạng cá nhân như tên, email, số điện thoại của bạn.
-                </div>
-                <ul style={{ fontSize: 17, marginLeft: 24, marginBottom: 8, textAlign: 'justify', listStyleType: 'disc' }}>
-                  <li style={{ marginBottom: 4 }}>
-                    <b>Dữ liệu trò chơi:</b> Tất cả dữ liệu tiến trình trò chơi (màn chơi, vật phẩm, v.v.) chỉ được lưu trữ trong bộ nhớ nội bộ của thiết bị di động của bạn.
-                  </li>
-                  <li>
-                    <b>Ngoại lệ về nhật ký máy chủ:</b> Trong quá trình liên lạc với máy chủ nhằm đảm bảo tính ổn định dịch vụ, bảo mật và kiểm tra phiên bản, các nhật ký truy cập như địa chỉ IP có thể được ghi lại tạm thời. Những thông tin này chỉ được sử dụng cho mục đích bảo mật và sẽ tự động bị xóa vĩnh viễn sau một khoảng thời gian nhất định.
-                  </li>
-                </ul>
-                <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  2. Thu thập tự động bởi dịch vụ bên thứ ba (Third-Party Data Processing)
-                </div>
-                <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  Để cung cấp quảng cáo trong ứng dụng (AdMob) và phân tích lỗi (Firebase), ứng dụng này cho phép các dịch vụ bên thứ ba đã được xác minh thu thập từ thiết bị của bạn các thông tin như ID quảng cáo (ADID), cookie, thông tin thiết bị, v.v. Dữ liệu này có thể được truyền và xử lý trên các máy chủ ở nước ngoài (như Google), tuân thủ quy định của Bộ Thông tin và Truyền thông Việt Nam cũng như các pháp luật liên quan, và được bảo vệ theo chính sách của từng nhà cung cấp.
-                </div>
-                <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  3. Thời hạn lưu trữ dữ liệu và quy trình hủy dữ liệu
-                </div>
-                <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  Do nhà cung cấp dịch vụ không trực tiếp lưu trữ thông tin cá nhân của người dùng, nên không thiết lập thời hạn lưu trữ riêng. Việc hủy dữ liệu và thực hiện các quyền liên quan tuân theo các nguyên tắc sau:
-                </div>
-                <ul style={{ fontSize: 17, marginLeft: 24, marginBottom: 0, textAlign: 'justify', listStyleType: 'disc' }}>
-                  <li style={{ marginBottom: 8 }}>
-                    <b>Hủy dữ liệu cục bộ:</b> Ngay khi người dùng gỡ cài đặt (Uninstall) ứng dụng hoặc thực hiện “xóa dữ liệu” trong cài đặt thiết bị, <b>toàn bộ dữ liệu trò chơi được lưu trữ trên thiết bị sẽ bị xóa vĩnh viễn và không thể khôi phục.</b>
-                  </li>
-                  <li style={{ marginBottom: 8 }}>
-                    <b>Hủy dữ liệu của bên thứ ba:</b> Các dữ liệu do bên thứ ba thu thập như ID quảng cáo có thể được người dùng kiểm soát thông qua cài đặt thiết bị (ví dụ: đặt lại ID quảng cáo) và sẽ được tự động hủy theo chính sách lưu trữ dữ liệu của từng dịch vụ bên thứ ba (ví dụ: cài đặt thời gian lưu trữ dữ liệu của Google Analytics).
-                  </li>
-                  <li>
-                    <b>Thực hiện quyền của người dùng:</b> Do dịch vụ này không tạo tài khoản người dùng trên máy chủ, nên không cần gửi yêu cầu “hủy tư cách thành viên” riêng. Ngay khi ứng dụng bị gỡ cài đặt, hợp đồng sử dụng dịch vụ sẽ chấm dứt và việc thu thập dữ liệu sẽ dừng lại.
-                  </li>
-                </ul>
-              </>
-            )}
-          </div>
+            <div style={{ marginBottom: 40 }}>
+              <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, lineHeight: 1.3 }}>
+                {section9?.title}
+              </h2>
+              {section9 && section9.items && (
+                <>
+                  {/* Phần 1 và 2: render như cũ */}
+                  {section9.items[0] && (
+                    <div style={{ marginBottom: 18 }}>
+                      {section9.items[0].label && (
+                        <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>{section9.items[0].label}</div>
+                      )}
+                      {section9.items[0].text && (
+                        <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: section9.items[0].text }} />
+                      )}
+                    </div>
+                  )}
+                  {section9.items[1] && (
+                    <div style={{ marginBottom: 18 }}>
+                      {section9.items[1].label && (
+                        <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>{section9.items[1].label}</div>
+                      )}
+                      {section9.items[1].text && (
+                        <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: section9.items[1].text }} />
+                      )}
+                    </div>
+                  )}
+                  {/* Phần 3: render đúng format bullet list */}
+                  {section9.items[2] && (() => {
+                    const html = section9.items[2]?.text || "";
+                    // Tách thành các đoạn theo <br><br> hoặc <br />\n<br /> hoặc <br />\s*<br />
+                    const blocks = Array.isArray(html.split)
+                      ? html.split(/<br\s*\/?>(\s*\n)?<br\s*\/?>(\s*)?/)
+                      : [];
+                    // Nếu có nhiều hơn 1 block và block đầu không phải bullet thì tách, nếu không thì render nguyên văn
+                    let intro = "";
+                    let bullets = blocks;
+                    let canBullet = false;
+                    if (blocks.length > 1 && typeof blocks[0] === 'string' && blocks[0].trim && !blocks[0].trim().match(/^(<b>|<strong>|•|-)/)) {
+                      intro = blocks[0];
+                      bullets = blocks.slice(1);
+                      canBullet = true;
+                    }
+                    // Nếu không tách được bullets, render toàn bộ text như một đoạn giải thích
+                    if (!canBullet) {
+                      return (
+                        <div style={{ marginBottom: 18 }}>
+                          {section9.items[2].label && (
+                            <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>{section9.items[2].label}</div>
+                          )}
+                          <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: html }} />
+                        </div>
+                      );
+                    }
+                    return (
+                      <div style={{ marginBottom: 18 }}>
+                        {section9.items[2].label && (
+                          <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>{section9.items[2].label}</div>
+                        )}
+                        {intro && (
+                          <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: intro }} />
+                        )}
+                        <ul style={{ paddingLeft: 28, marginBottom: 0 }}>
+                          {Array.isArray(bullets) && bullets.map((item, idx) =>
+                            typeof item === 'string' && item.trim && item.trim() && (
+                              <li key={idx} style={{ marginBottom: 8, textAlign: 'justify', fontSize: 17 }}
+                                dangerouslySetInnerHTML={{
+                                  __html: (() => {
+                                    // Thêm dấu chấm ở cuối nếu chưa có
+                                    let text = item.replace(/^\s*[-•]?\s*/, '');
+                                    text = text.trim();
+                                    if (!text.endsWith('.')) text += '.';
+                                    return text;
+                                  })()
+                                }}
+                              />
+                            )
+                          )}
+                        </ul>
+                      </div>
+                    );
+                  })()}
+                </>
+              )}
+            </div>
           {/* Điều 10 - Ứng dụng xử lý dữ liệu cá nhân của trẻ em như thế nào? */}
           <div style={{ marginBottom: 40 }}>
             <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, lineHeight: 1.3 }}>
@@ -913,27 +938,29 @@ function PersonalDataPolicy() {
                   1. Definition of children and processing principles
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  This service can be used by all ages; however, in accordance with Vietnamese law and the principles of protecting children's rights, the service provider applies special protective measures for children <b>under 16 years of age (according to Vietnamese standards)</b>. We do not intentionally collect personally identifiable information from children and always prioritize protecting the best interests and rights of children.
+                  This service can be used by all ages; however, in accordance with Vietnamese law and the principles of protecting children's rights, the Service Provider applies special protective measures for children under 16 years of age. We do not knowingly collect personally identifiable information from children and always prioritize protecting the best interests and rights of children.
                 </div>
                 <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  2. Advertising and data processing for children (Compliance with Google Play's Family Policy)
+                  2. Advertising and data processing for children (Compliance with Google Play's Families Policy)
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  This application complies with Google Play's Families Policy. In cases where a user is identified as a child or content is classified as child-friendly, the following measures will be automatically applied:
+                  This application complies with Google Play's Families Policy. In cases where a user is identified as a child or content is classified as child-directed, the following measures will be applied:
                 </div>
                 <ul style={{ fontSize: 17, marginLeft: 24, marginBottom: 8, textAlign: 'justify', listStyleType: 'disc' }}>
                   <li style={{ marginBottom: 8 }}>
-                    <b>Restriction of Advertising Identifier (ADID) collection:</b> Sending a “Tag For Child Directed Treatment” signal to advertising partners (such as AdMob, Unity Ads, etc.) to restrict data collection for behavioral tracking or user profile creation.
+                    <b>Restriction of Advertising Identifier (ADID) collection:</b> Sending a “Tag For Child Directed Treatment” signal to advertising partners (such as AdMob, Unity Ads, etc.) to restrict data collection for behavioral tracking or user profiling.
                   </li>
                   <li>
-                    <b>Providing non-personalized ads:</b> Children will only be shown contextual ads related to app content, not interest-based ads.
+                    <b>Providing non-personalized ads:</b> Children will only be shown contextual ads related to the app content, not interest-based ads.
                   </li>
                 </ul>
                 <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
-                  3. Parental Rights and Data Deletion
+                  3. Parental rights and data deletion
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 0, textAlign: 'justify' }}>
-                  Because this service does not store user information on its own servers, children's data is not stored separately. If a parent or legal guardian discovers that a child is using the service via a device without their consent, they can uninstall the application to immediately stop all data collection and delete all information stored on the device. For further assistance, please contact our data security department at <a href="mailto:cskh.game@vkentertainment.vn">cskh.game@vkentertainment.vn</a>
+                  For applications or features that provide account-based services (such as Google login), if a child uses such features and logs in with a Google account, certain personal data, specifically the Google email address and item purchase history (receipt), may be collected and stored on the Service Provider’s servers for the purpose of supporting features such as purchase restoration.<br/>
+                  If a parent or legal guardian becomes aware that a child has provided such information without their consent, or wishes to request deletion of the child's data stored on the server, they may contact the Service Provider at: <a href="mailto:cskh.game@vkentertainment.vn">cskh.game@vkentertainment.vn</a>.<br/>
+                  Additionally, parents or legal guardians may uninstall the application at any time to immediately stop all data collection and delete all locally stored data on the device.
                 </div>
               </>
             ) : (
@@ -942,27 +969,29 @@ function PersonalDataPolicy() {
                   1. Định nghĩa trẻ em và nguyên tắc xử lý
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  Dịch vụ này có thể được sử dụng bởi mọi lứa tuổi; tuy nhiên, theo quy định pháp luật Việt Nam và các nguyên tắc bảo vệ quyền trẻ em, nhà cung cấp dịch vụ áp dụng các biện pháp bảo vệ đặc biệt đối với trẻ em dưới 16 tuổi (theo tiêu chuẩn Việt Nam). Chúng tôi không cố ý thu thập thông tin nhận dạng cá nhân của trẻ em và luôn đặt việc bảo vệ quyền lợi và lợi ích tốt nhất của trẻ em làm nguyên tắc hàng đầu.
+                  Dịch vụ này có thể được sử dụng bởi mọi lứa tuổi; tuy nhiên, theo quy định của pháp luật Việt Nam và nguyên tắc bảo vệ quyền trẻ em, Nhà cung cấp dịch vụ áp dụng các biện pháp bảo vệ đặc biệt đối với trẻ em dưới 16 tuổi (theo tiêu chuẩn Việt Nam). Chúng tôi không cố ý thu thập các thông tin có thể xác định danh tính cá nhân của trẻ em và luôn ưu tiên bảo vệ quyền và lợi ích tốt nhất của trẻ em.
                 </div>
                 <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
                   2. Quảng cáo và xử lý dữ liệu đối với trẻ em (Tuân thủ chính sách Gia đình của Google Play)
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 8, textAlign: 'justify' }}>
-                  Ứng dụng này tuân thủ Chính sách Gia đình (Families Policy) của Google Play. Trong trường hợp người dùng được xác định là trẻ em hoặc nội dung được phân loại là dành cho trẻ em, các biện pháp sau sẽ được tự động áp dụng:
+                  Ứng dụng này tuân thủ Chính sách dành cho gia đình của Google Play. Trong trường hợp người dùng được xác định là trẻ em hoặc nội dung được phân loại hướng đến trẻ em, các biện pháp sau sẽ được áp dụng:
                 </div>
                 <ul style={{ fontSize: 17, marginLeft: 24, marginBottom: 8, textAlign: 'justify', listStyleType: 'disc' }}>
                   <li style={{ marginBottom: 8 }}>
-                    <b>Hạn chế thu thập mã định danh quảng cáo (ADID):</b> Gửi tín hiệu “Tag For Child Directed Treatment” đến các đối tác quảng cáo (như AdMob, Unity Ads, v.v.) để hạn chế việc thu thập dữ liệu phục vụ theo dõi hành vi hoặc tạo hồ sơ người dùng.
+                    <b>Hạn chế thu thập mã định danh quảng cáo (ADID):</b> Gửi tín hiệu “Tag For Child Directed Treatment” tới các đối tác quảng cáo (như AdMob, Unity Ads, v.v.) nhằm hạn chế việc thu thập dữ liệu phục vụ theo dõi hành vi hoặc xây dựng hồ sơ người dùng.
                   </li>
                   <li>
-                    <b>Cung cấp quảng cáo không cá nhân hóa (Non-Personalized Ads):</b> Trẻ em chỉ được hiển thị quảng cáo theo ngữ cảnh (Contextual Ads) liên quan đến nội dung ứng dụng, không phải quảng cáo dựa trên sở thích.
+                    <b>Cung cấp quảng cáo không cá nhân hóa (Non-Personalized Ads):</b> Trẻ em chỉ được hiển thị quảng cáo theo ngữ cảnh nội dung ứng dụng, không phải quảng cáo dựa trên sở thích.
                   </li>
                 </ul>
                 <div style={{ fontWeight: 600, fontSize: 17, marginBottom: 6, marginTop: 18 }}>
                   3. Quyền của phụ huynh và việc xóa dữ liệu
                 </div>
                 <div style={{ fontSize: 17, marginBottom: 0, textAlign: 'justify' }}>
-                  Do dịch vụ này không lưu trữ thông tin người dùng trên máy chủ riêng, nên không lưu giữ dữ liệu của trẻ em một cách riêng biệt. Trong trường hợp phụ huynh hoặc người giám hộ hợp pháp phát hiện trẻ sử dụng dịch vụ thông qua thiết bị mà không có sự đồng ý của mình, họ có thể gỡ cài đặt (Uninstall) ứng dụng để ngay lập tức dừng mọi hoạt động thu thập dữ liệu và xóa toàn bộ thông tin được lưu trữ trên thiết bị. Nếu cần hỗ trợ thêm, vui lòng liên hệ với bộ phận phụ trách bảo mật thông tin tại <a href="mailto:cskh.game@vkentertainment.vn">cskh.game@vkentertainment.vn</a>
+                  Đối với các ứng dụng hoặc tính năng có cung cấp dịch vụ dựa trên tài khoản (ví dụ: đăng nhập Google), nếu trẻ em sử dụng các tính năng này và đăng nhập bằng tài khoản Google, một số dữ liệu cá nhân nhất định, cụ thể là địa chỉ email Google và lịch sử mua vật phẩm (biên nhận), có thể được thu thập và lưu trữ trên máy chủ của Nhà cung cấp dịch vụ nhằm hỗ trợ các tính năng như khôi phục giao dịch.<br/>
+                  Nếu phụ huynh hoặc người giám hộ hợp pháp phát hiện trẻ đã cung cấp các thông tin này mà không có sự đồng ý, hoặc muốn yêu cầu xóa dữ liệu của trẻ được lưu trữ trên máy chủ, vui lòng liên hệ với Nhà cung cấp dịch vụ qua địa chỉ: cskh.game@vkentertainment.vn<br/>
+                  Ngoài ra, phụ huynh hoặc người giám hộ có thể gỡ cài đặt ứng dụng bất kỳ lúc nào để ngay lập tức dừng việc thu thập dữ liệu và xóa toàn bộ dữ liệu được lưu trữ trên thiết bị.
                 </div>
               </>
             )}
